@@ -6,11 +6,14 @@ import Impact from "./components/Impact"
 import WhatWeDo from "./components/WhatWeDo"
 import Media from "./components/Media"
 import Speeches from "./components/Speeches"
+import Footer from "./components/Footer"
+
 function App() {
 
 
   return (
     <>
+      <NavBar className=" hidden lg:block sticky top-0 z-50" />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
@@ -19,6 +22,7 @@ function App() {
           <Route path="/media" element={<Media />} />
           <Route path="/speeches" element={<Speeches />} />
       </Routes>
+      <Footer />
     </>
   )
 }
