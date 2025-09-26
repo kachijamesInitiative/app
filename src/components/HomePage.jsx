@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeImage from '../assets/HomeImage.png'
 import MobileHomeImage from '../assets/MobileHomeImage.jpeg'
+import Director from '../assets/Director.jpeg'
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 function HomePage() {
@@ -24,11 +25,11 @@ function HomePage() {
         //whileHover={{ scale: 1.1 }} // Animation on hover
         >
           <div className='text-white text-[100px] font-bold pt-[14%] pl-[7%] w-[80%]'>
-            <p className='leading-28'>Empowering <br />People, Building<br />the Future</p>
+            <p className='leading-28'>KACHI <br />AGHASILI<br />INITIATIVE</p>
           </div>
           <div className='my-12'>
-            <Link to={'/whatwedo'} className='ml-[7%] bg-[#4b5c38] text-white font-bold py-3 px-16 text-2xl rounded-md hover:bg-white hover:text-[#4b5c38]'>
-              Join the Initiative
+            <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-20 text-2xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
+              Presenting Hope
             </Link>
           </div>
 
@@ -50,7 +51,7 @@ function HomePage() {
 
         <div className='pt-[25%] text-[#dadaf0] text-2xl text-center font-extrabold'
         >
-          <p style={{
+          <div style={{
             //position: 'absolute',
             top: '0%',
             //left: '50%',
@@ -61,22 +62,27 @@ function HomePage() {
             color: 'white',
             width: '100%'
           }}
-            className=''>Empowering <br />People, Building<br />the Future</p>
+            className=''> 
+            <h1> Kachi Aghasili Initiative </h1>
+            
+              <p className='text-[14px] text-[#12f00a]'>Presenting Hope</p>
+          
+          </div>
         </div>
       </div>
 
       {/* About and image */}
       <div className='bg-pink-100'>
-        <div className='lg:flex gap-8  justify-cente p-4 lg:p-20'>
-          <div className='flex-1 '>
+        <div className='lg:flex gap-8  justify-cente p-2 lg:p-10'>
+          <div className='flex-1 shadow-2xl p-2 lg:p-10'>
             <h1 className='text-2xl md:text-4xl font-bold pb-2 lg:pb-11 text-[#2d80aa]'>About</h1>
             <div className='text-[#2d80aa]'>
               <h1>🌍 <b>Kachi James Initiative</b></h1>
-              The Kachi James Initiative is a visionary platform dedicated to empowering individuals, strengthening communities, and driving sustainable change. Built on the belief that every person deserves the opportunity to thrive, the initiative focuses on <b>youth empowerment, women’s inclusion, education, and community development.</b>
+              The Kachi Aghasili Initiative is a visionary platform dedicated to empowering individuals, strengthening communities, and driving sustainable change. Built on the belief that every person deserves the opportunity to thrive, the initiative focuses on <b>youth empowerment, women’s inclusion, education, and community development.</b>
 
-              <br /><br />Through innovative programs, mentorship, and capacity-building projects, Kachi James Initiative works to unlock potential, nurture leadership, and inspire positive action. By leveraging collaboration, technology, and grassroots engagement, the initiative bridges gaps and creates pathways for growth, dignity, and shared prosperity. <br /><br />
+              <br /><br />Through innovative programs, mentorship, and capacity-building projects, Kachi Aghasili Initiative works to unlock potential, nurture leadership, and inspire positive action. By leveraging collaboration, technology, and grassroots engagement, the initiative bridges gaps and creates pathways for growth, dignity, and shared prosperity. <br /><br />
 
-              At its heart, Kachi James Initiative is more than a movement—it’s a commitment to building a future where <b>hope, equity, and opportunity</b> are accessible to all. <br /><br />
+              At its heart, Kachi Aghasili Initiative is more than a movement—it’s a commitment to building a future where <b>hope, equity, and opportunity</b> are accessible to all. <br /><br />
 
               <b>Our Core Values:</b>
               <ul>
@@ -91,8 +97,8 @@ function HomePage() {
               Together, we rise. 💡
             </div>
           </div>
-          <div className='hidden lg:block flex-1 '>
-            <img className='w-[90%] h-[65%]' src={MobileHomeImage} alt="" />
+          <div className='flex justify-center py-10 lg:py-0 flex-1 '>
+            <img className='lg:w-[90%] h-[100%]' src={Director} alt="" />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
+import Logo from '../assets/logo.jpeg'
 
 function NavBar() {
     const [activeTab, setActiveTab] = useState('');
@@ -13,20 +14,20 @@ function NavBar() {
 
     return (
         <>
-            <div className='hidden lg:flex justify-between md:mx-28 pt-8  mb-10'>
+            <div className='hidden lg:flex justify-between md:mx-28 mt-6  mb-6'>
                 <div className="hidden md:block">
                     <ul className='font-stretch-expanded'>
                         <Link
                             to="/"
-                            className={activeTab === 'home' ? 'border-b border-black pb-4' : ''}
+                            className={activeTab === 'home' ? ' border-black ' : ''}
                             onClick={() => handleTabClick('home')}
                         >
-                            KACHI AGHASILI INITIATIVE
+                            <img className='w-22' src={Logo} alt="Logo" />
                         </Link>
                     </ul>
 
                 </div>
-                <nav className='md:flex gap-8 text-gray-600 hidden'>
+                <nav className='md:flex gap-8 text-gray-600 hidden mt-4 '>
                     <Link
                         to="/about"
                         className={activeTab === 'about' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
@@ -72,13 +73,13 @@ function NavBar() {
 
 
 
-            <div className='lg:hidden flex justify-between  p-8'>
+            <div className='lg:hidden flex justify-between  p-4'>
                 <Link
                     to="/"
                     className={`font-stretch-expanded ${activeTab === 'home' ? ' ' : 'font-normal'}`}
                     onClick={() => handleTabClick('home')}
                 >
-                    KACHE AGHASILI INITIATIVE
+                    <img className='w-12' src={Logo} alt="Logo" />
                 </Link>
                 <button
                     className="lg:hidden focus:outline-none"
