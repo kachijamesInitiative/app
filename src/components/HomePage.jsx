@@ -28,7 +28,7 @@ function HomePage() {
             <p className='leading-28'>KACHI <br />AGHASILI<br />INITIATIVE</p>
           </div>
           <div className='my-12'>
-            <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-20 text-2xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
+            <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-20 text-3xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
               Presenting Hope
             </Link>
           </div>
