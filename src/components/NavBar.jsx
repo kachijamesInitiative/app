@@ -13,7 +13,7 @@ function NavBar() {
 
     return (
         <>
-            <div className='hidden lg:flex justify-between md:mx-28 p-6 mb-10'>
+            <div className='hidden lg:flex justify-between md:mx-28 pt-8  mb-10'>
                 <div className="hidden md:block">
                     <ul className='font-stretch-expanded'>
                         <Link

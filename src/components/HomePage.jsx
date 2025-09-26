@@ -2,11 +2,13 @@ import React from 'react'
 import HomeImage from '../assets/HomeImage.png'
 import MobileHomeImage from '../assets/MobileHomeImage.jpeg'
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom'
 function HomePage() {
   return (
     <div>
       <div className='hidden lg:block'
         style={{
+
           backgroundImage: `url(${HomeImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -14,16 +16,29 @@ function HomePage() {
           width: '100%', // change this to your desired width
         }}>
         <motion.div
-          className='text-white text-8xl font-bold pt-[20%] pl-[7%] w-[50%]'
-          initial={{ opacity: 0, y: 30 }} // Initial state (e.g., hidden, slightly below)
-          animate={{ opacity: 5, y: 0 }} // Animate to this state (e.g., visible, original position)
-          transition={{ duration: 1 }} // Animation duration
+
+          initial={{ opacity: 0, x: 30 }} // Initial state (e.g., hidden, slightly below)
+          animate={{ opacity: 5, x: 1 }} // Animate to this state (e.g., visible, original position)
+          transition={{ duration: 3 }} // Animation duration
+
         //whileHover={{ scale: 1.1 }} // Animation on hover
         >
-          Empowering <br />People, Building<br />the Future
+          <div className='text-white text-[100px] font-bold pt-[14%] pl-[7%] w-[80%]'>
+            <p className='leading-28'>Empowering <br />People, Building<br />the Future</p>
+          </div>
+          <div className='my-12'>
+            <Link to={'/whatwedo'} className='ml-[7%] bg-[#4b5c38] text-white font-bold py-3 px-16 text-2xl rounded-md hover:bg-white hover:text-[#4b5c38]'>
+              Join the Initiative
+            </Link>
+          </div>
+
         </motion.div>
 
       </div>
+
+
+
+      {/* mobile div */}
       <div className=' lg:hidden'
         style={{
           backgroundImage: `url(${MobileHomeImage})`,
@@ -32,18 +47,54 @@ function HomePage() {
           height: '40vh', // change this to your desired height
           width: '100%', // change this to your desired width
         }}>
-        <motion.div
-          className=''
-          initial={{ opacity: 0, y: 30 }} // Initial state (e.g., hidden, slightly below)
-          animate={{ opacity: 5, y: 0 }} // Animate to this state (e.g., visible, original position)
-          transition={{ duration: 1 }} // Animation duration
-        //whileHover={{ scale: 1.1 }} // Animation on hover
-        >
-         <div div className='pt-[35%] text-[#1414d8] text-2xl text-center font-extrabold'>
-           <p>Empowering <br />People, Building<br />the Future</p>
-         </div>
-        </motion.div>
 
+        <div className='pt-[25%] text-[#dadaf0] text-2xl text-center font-extrabold'
+        >
+          <p style={{
+            //position: 'absolute',
+            top: '0%',
+            //left: '50%',
+            //transform: 'translate(-50%, -50%)',
+            background: 'rgba(0, 0, 0, 0.4)',
+            padding: '20px',
+            //borderRadius: '10px',
+            color: 'white',
+            width: '100%'
+          }}
+            className=''>Empowering <br />People, Building<br />the Future</p>
+        </div>
+      </div>
+
+      {/* About and image */}
+      <div className='bg-pink-100'>
+        <div className='lg:flex gap-8  justify-cente p-4 lg:p-20'>
+          <div className='flex-1 '>
+            <h1 className='text-2xl md:text-4xl font-bold pb-2 lg:pb-11 text-[#2d80aa]'>About</h1>
+            <div className='text-[#2d80aa]'>
+              <h1>🌍 <b>Kachi James Initiative</b></h1>
+              The Kachi James Initiative is a visionary platform dedicated to empowering individuals, strengthening communities, and driving sustainable change. Built on the belief that every person deserves the opportunity to thrive, the initiative focuses on <b>youth empowerment, women’s inclusion, education, and community development.</b>
+
+              <br /><br />Through innovative programs, mentorship, and capacity-building projects, Kachi James Initiative works to unlock potential, nurture leadership, and inspire positive action. By leveraging collaboration, technology, and grassroots engagement, the initiative bridges gaps and creates pathways for growth, dignity, and shared prosperity. <br /><br />
+
+              At its heart, Kachi James Initiative is more than a movement—it’s a commitment to building a future where <b>hope, equity, and opportunity</b> are accessible to all. <br /><br />
+
+              <b>Our Core Values:</b>
+              <ul>
+                <li>✨ Empowerment</li>
+                <li>✨ Integrity</li>
+                <li>✨ Innovation</li>
+                <li>✨ Inclusiveness</li>
+                <li>✨ Community Impact</li>
+              </ul>
+              <br />
+
+              Together, we rise. 💡
+            </div>
+          </div>
+          <div className='hidden lg:block flex-1 '>
+            <img className='w-[90%] h-[65%]' src={MobileHomeImage} alt="" />
+          </div>
+        </div>
       </div>
 
 
