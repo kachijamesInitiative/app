@@ -2,6 +2,11 @@ import React from 'react'
 import HomeImage from '../assets/HomeImage.png'
 import MobileHomeImage from '../assets/MobileHomeImage.jpeg'
 import Director from '../assets/Director.jpeg'
+import Education from '../assets/Education.png'
+import Leadership from '../assets/leadership.png'
+import Women from '../assets/women-empowerment.png'
+import Youth from '../assets/Youth.png'
+
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 function HomePage() {
@@ -62,17 +67,17 @@ function HomePage() {
             color: 'white',
             width: '100%'
           }}
-            className=''> 
+            className=''>
             <h1> Kachi Aghasili Initiative </h1>
-            
-              <p className='text-[14px] text-[#12f00a]'>Presenting Hope</p>
-          
+
+            <p className='text-[14px] text-[#12f00a]'>Presenting Hope</p>
+
           </div>
         </div>
       </div>
 
       {/* About and image */}
-      <div className='bg-pink-100'>
+      <div className='bg-pink-100 pb-40'>
         <div className='lg:flex gap-8  justify-cente p-2 lg:p-10'>
           <div className='flex-1 shadow-2xl p-2 lg:p-10'>
             <h1 className='text-2xl md:text-4xl font-bold pb-2 lg:pb-11 text-[#2d80aa]'>About</h1>
@@ -101,7 +106,55 @@ function HomePage() {
             <img className='lg:w-[90%] h-[100%]' src={Director} alt="" />
           </div>
         </div>
+
+
+        <div className='lg:mt-20'>
+          <div className='flex lg:ml-91 lg:pb-8 ml-7 pb-4'>
+            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold'>Our programs</h1>
+          </div>
+          <div className='space-y-4 lg:space-y-0 lg:flex gap-4 justify-center mx-6'>
+            <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
+              <div className='flex justify-center'>
+                <img className='lg:w-[40%] h-[90%] w-[30%]' src={Education} alt="Education" />
+              </div>
+              <div className='text-center'>
+                <h1>Education</h1>
+              </div>
+            </div>
+
+            <div className='bg-white p-4 lg:w-[15%] nshadow-sm hover:bg-pink-100'>
+              <div className='flex justify-center'>
+                <img className='lg:w-[40%] h-[90%] w-[30%]' src={Leadership} alt="leadership icon" />
+              </div>
+              <div className='text-center'>
+                <h1>Leadership</h1>
+              </div>
+            </div>
+
+            <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
+              <div className='flex justify-center'>
+                <img className='lg:w-[40%] h-[90%] w-[30%]' src={Women} alt="women empowerment" />
+              </div>
+              <div className='text-center'>
+                <h1>Women Empowerment</h1>
+              </div>
+            </div>
+
+
+            <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
+              <div className='flex justify-center'>
+                <img className='lg:w-[40%] h-[90%] w-[30%]' src={Youth} alt="youth empowerment" />
+              </div>
+              <div className='text-center p-2'>
+                <h1>Youth Engagement</h1>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
+
+
 
 
     </div>
