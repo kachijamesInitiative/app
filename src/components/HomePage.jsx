@@ -5,7 +5,7 @@ import Director from '../assets/Director.jpeg'
 import Education from '../assets/Education.png'
 import Leadership from '../assets/leadership.png'
 import Women from '../assets/women-empowerment.png'
-//import Youth from '../assets/Youth.png'
+import Youth from '../assets/youth.png'
 
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
@@ -122,7 +122,7 @@ function HomePage() {
               </div>
             </div>
 
-            <div className='bg-white p-4 lg:w-[15%] nshadow-sm hover:bg-pink-100'>
+            <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
               <div className='flex justify-center'>
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Leadership} alt="leadership icon" />
               </div>
@@ -141,14 +141,14 @@ function HomePage() {
             </div>
 
 
-            {/* <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
+            <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
               <div className='flex justify-center'>
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Youth} alt="youth empowerment" />
               </div>
               <div className='text-center p-2'>
                 <h1>Youth Engagement</h1>
               </div>
-            </div> */}
+            </div>
 
           </div>
         </div>
