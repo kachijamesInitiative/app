@@ -6,6 +6,7 @@ import Education from '../assets/Education.png'
 import Leadership from '../assets/leadership.png'
 import Women from '../assets/women-empowerment.png'
 import Youth from '../assets/youth.png'
+import ForestBg from '../assets/forest bg.jpg'
 
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
@@ -77,7 +78,7 @@ function HomePage() {
       </div>
 
       {/* About and image */}
-      <div className='bg-pink-100 pb-40'>
+      <div className='bg-pink-100 pb-30'>
         <div className='lg:flex gap-8  justify-cente p-2 lg:p-10'>
           <div className='flex-1 shadow-2xl p-2 lg:p-10'>
             <h1 className='text-2xl md:text-4xl font-bold pb-2 lg:pb-11 text-[#2d80aa]'>About</h1>
@@ -108,17 +109,32 @@ function HomePage() {
         </div>
 
 
-        <div className='lg:mt-20'>
-          <div className='flex lg:ml-91 lg:pb-8 ml-7 pb-4'>
-            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold'>Our programs</h1>
+        <div className='lg:mt-20 py-16'
+        
+          style={{
+          backgroundImage: `url(${ForestBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+    
+        
+        }}
+        >
+          <div className=' text-center lg:mx-[40%] mx-28 p-2'>
+            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold text-[#12f00a]'
+             style={{
+            background: 'rgba(0, 0, 0, 0.5)',
+    
+          }}
+            
+          >Our Key Features</h1>
           </div>
-          <div className='space-y-4 lg:space-y-0 lg:flex gap-4 justify-center mx-6'>
+          <div className='space-y-4 lg:space-y-0 lg:flex gap-4 justify-center mx-6 my-10'>
             <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
               <div className='flex justify-center'>
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Education} alt="Education" />
               </div>
               <div className='text-center'>
-                <h1>Education</h1>
+                <h1 className='text-[#12f00a] font-bold'>Education</h1>
               </div>
             </div>
 
@@ -126,8 +142,8 @@ function HomePage() {
               <div className='flex justify-center'>
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Leadership} alt="leadership icon" />
               </div>
-              <div className='text-center'>
-                <h1>Leadership</h1>
+              <div className='text-center mt-4'>
+                <h1 className='text-[#12f00a] font-bold'>Leadership</h1>
               </div>
             </div>
 
@@ -136,7 +152,7 @@ function HomePage() {
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Women} alt="women empowerment" />
               </div>
               <div className='text-center'>
-                <h1>Women Empowerment</h1>
+                <h1 className='text-[#12f00a] font-bold'>Women Empowerment</h1>
               </div>
             </div>
 
@@ -146,7 +162,7 @@ function HomePage() {
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Youth} alt="youth empowerment" />
               </div>
               <div className='text-center p-2'>
-                <h1>Youth Engagement</h1>
+                <h1 className='text-[#12f00a] font-bold'>Youth Engagement</h1>
               </div>
             </div>
 
