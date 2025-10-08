@@ -120,7 +120,7 @@ function HomePage() {
         }}
         >
           <div className=' text-center lg:mx-[40%] mx-28 p-2'>
-            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold text-[#12f00a]'
+            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold text-[#12f00a] py-4'
              style={{
             background: 'rgba(0, 0, 0, 0.5)',
     
@@ -142,7 +142,7 @@ function HomePage() {
               <div className='flex justify-center'>
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Leadership} alt="leadership icon" />
               </div>
-              <div className='text-center mt-4'>
+              <div className='text-center mt-'>
                 <h1 className='text-[#12f00a] font-bold'>Leadership</h1>
               </div>
             </div>
