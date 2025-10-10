@@ -7,6 +7,10 @@ import Leadership from '../assets/leadership.png'
 import Women from '../assets/women-empowerment.png'
 import Youth from '../assets/youth.png'
 import ForestBg from '../assets/forest bg.jpg'
+import Hope from '../assets/hope.png'
+import { FaCoins } from "react-icons/fa";
+import { IoIosPeople } from "react-icons/io";
+import { FaPeopleCarry } from "react-icons/fa";
 
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
@@ -110,25 +114,25 @@ function HomePage() {
 
 
         <div className='lg:mt-20 py-16'
-        
+
           style={{
-          backgroundImage: `url(${ForestBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-    
-        
-        }}
-        >
-          <div className=' text-center lg:mx-[40%] mx-28 p-2'>
-            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold text-[#12f00a] py-4'
-             style={{
-            background: 'rgba(0, 0, 0, 0.5)',
-    
+            backgroundImage: `url(${ForestBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+
+
           }}
-            
-          >Our Key Features</h1>
+        >
+          <div className=' text-center lg:mx-[38%] mx-22 p-2'>
+            <h1 className='lg:text-2xl lg:font-semi-bold from-neutral-400 font-bold text-[#12f00a] py-4 px-1'
+              style={{
+                background: 'rgba(0, 0, 0, 0.5)',
+
+              }}
+
+            >Our Key Features</h1>
           </div>
-          <div className='space-y-4 lg:space-y-0 lg:flex gap-4 justify-center mx-6 my-10'>
+          <div className='space-y-4 lg:space-y-0 lg:flex gap-4 justify-center mx-10 lg:mx-6 my-10'>
             <div className='bg-white p-4 lg:w-[15%] shadow-sm hover:bg-pink-100'>
               <div className='flex justify-center'>
                 <img className='lg:w-[40%] h-[90%] w-[30%]' src={Education} alt="Education" />
@@ -166,6 +170,44 @@ function HomePage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </div>
+
+      <div className='lg:grid grid-cols-2 py-8 lg:py-48 md:gap-20 md:mx-8  mx-4 xl:px-64'>
+        <div className='flex-1'>
+          <div>
+            <h1 className='text-2xl font-bold mb-8'>Welcome to Kachi Aghasili Initiative</h1>
+            <p className='text-[#777777]  md:w-[80%]'>The <b> Kachi Aghasili Initiative</b>
+               is a humanitarian and empowerment platform committed to restoring dignity,
+                inspiring resilience, and creating opportunities for a better future.
+                 Guided by the belief that hope is the foundation for change, 
+                 the Initiative works to uplift individuals and communities
+                  through advocacy, education, and support programs that promote equality,
+                   integrity, and compassion. <br /><br />At its heart,<b> Kachi Aghasili Initiative</b> stands as a beacon of hope — empowering people to rise above challenges, believe in their potential, and build a society where kindness and fairness prevail. </p>
+          </div>
+          {/* text-[#12f00a] */}
+          <div className='md:flex gap-4 my-10 space-y-4 md:space-y-0'>
+            <div className='border-1 border-black py-6 px-8'>
+              <FaCoins className='text-[#777777] text-3xl' />
+              <p className='text-2xl font-bold py-3'>$0.00</p>
+              <p className='text-[#777777]'>Total Donation</p>
+            </div>
+            <div className='border-1 border-black py-6 px-8'>
+              <IoIosPeople className='text-[#777777] text-3xl' />
+              <p className='text-2xl font-bold py-3'>1465</p>
+              <p className='text-[#777777]'>Total Outreach</p>
+            </div>
+            <div className='border-1 border-black py-6 px-8'>
+              <FaPeopleCarry className='text-[#777777] text-3xl' />
+              <p className='text-2xl font-bold py-3'>0</p>
+              <p className='text-[#777777]'>Total Volunteers</p>
+            </div>
+          </div>
+        </div>
+        <div className='flex-1 '>
+          <div className='lg:bg-[#f3e9e9] lg:flex justify-center pb-9'>
+            <img className='md:w-[70%]  h-[80%]' src={Hope} alt="welcome image" />
           </div>
         </div>
       </div>
