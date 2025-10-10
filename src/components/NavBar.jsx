@@ -14,7 +14,7 @@ function NavBar() {
 
     return (
         <>
-            <div className='hidden lg:flex justify-between md:mx-28 mt-6  mb-6'>
+            <div className='hidden lg:flex justify-between md:mx-44 mt-6  mb-6'>
                 <div className="hidden md:block">
                     <ul className='font-stretch-expanded'>
                         <Link
@@ -28,6 +28,13 @@ function NavBar() {
 
                 </div>
                 <nav className='md:flex gap-8 text-gray-600 hidden mt-4 '>
+                    <Link
+                        to="/"
+                        className={activeTab === 'home' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
+                        onClick={() => handleTabClick('home')}
+                    >
+                        HOME
+                    </Link>
                     <Link
                         to="/about"
                         className={activeTab === 'about' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
@@ -89,16 +96,25 @@ function NavBar() {
                 </button>
             </div>
             <nav className={` ${isOpen ? 'lg:hidden bg-black p-4 text-white' : 'hidden'} `}>
+                                <div className='p-2'>
+                    <Link
+                        to="/"
+                        className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        onClick={() => handleTabClick('home')}
+                    >
+                        HOME
+                    </Link>
+                </div>
                 <div className='p-2'>
                     <Link
                         to="/about"
                         className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('about')}
                     >
-                        ABOUT KACHI
+                        ABOUT US
                     </Link>
                 </div>
-                <div className='p-2'>
+                {/* <div className='p-2'>
                     <Link
                         to="/impact"
                         className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
@@ -115,7 +131,7 @@ function NavBar() {
                     >
                         PHYLANTROPY
                     </Link>
-                </div>
+                </div> */}
                 <div className='p-2'>
                     <Link
                         to="/whatwedo"

@@ -1,7 +1,7 @@
 import React from 'react'
 import HomeImage from '../assets/HomeImage.png'
 import MobileHomeImage from '../assets/MobileHomeImage.jpeg'
-import Director from '../assets/Director.jpeg'
+import CountUp from "react-countup";
 import Education from '../assets/Education.png'
 import Leadership from '../assets/leadership.png'
 import Women from '../assets/women-empowerment.png'
@@ -48,7 +48,6 @@ function HomePage() {
       </div>
 
 
-
       {/* mobile div */}
       <div className=' lg:hidden'
         style={{
@@ -81,37 +80,77 @@ function HomePage() {
         </div>
       </div>
 
-      {/* About and image */}
-      <div className='bg-pink-100 pb-30'>
-        <div className='lg:flex gap-8  justify-cente p-2 lg:p-10'>
-          <div className='flex-1 shadow-2xl p-2 lg:p-10'>
-            <h1 className='text-2xl md:text-4xl font-bold pb-2 lg:pb-11 text-[#2d80aa]'>About</h1>
-            <div className='text-[#2d80aa]'>
-              <h1>🌍 <b>Kachi James Initiative</b></h1>
-              The Kachi Aghasili Initiative is a visionary platform dedicated to empowering individuals, strengthening communities, and driving sustainable change. Built on the belief that every person deserves the opportunity to thrive, the initiative focuses on <b>youth empowerment, women’s inclusion, education, and community development.</b>
 
-              <br /><br />Through innovative programs, mentorship, and capacity-building projects, Kachi Aghasili Initiative works to unlock potential, nurture leadership, and inspire positive action. By leveraging collaboration, technology, and grassroots engagement, the initiative bridges gaps and creates pathways for growth, dignity, and shared prosperity. <br /><br />
+      {/* counter */}
+      <div className="mt-8 md:grid md:grid-cols-2 md:gap-2 mb-[100px] lg:p-[100px] bg-white lg:mx-[180px] text-black lg:mt-[-90px] border-b border-green-200  p-4">
+        <div>
+          <h1 className="text-1xl md:text-3xl font-extrabold">
+            Shaping Narratives of Strength
+            <br />
+            <span className="text-[#12f00a]">Presenting Hope</span>
+          </h1>
+          <div className='pt-8'>
+            <Link to="/about" className="pt-16 border-b-4 border-[#12f00a] w-[120px]">
+              WHO WE ARE
+            </Link>
+          </div>
 
-              At its heart, Kachi Aghasili Initiative is more than a movement—it’s a commitment to building a future where <b>hope, equity, and opportunity</b> are accessible to all. <br /><br />
-
-              <b>Our Core Values:</b>
-              <ul>
-                <li>✨ Empowerment</li>
-                <li>✨ Integrity</li>
-                <li>✨ Innovation</li>
-                <li>✨ Inclusiveness</li>
-                <li>✨ Community Impact</li>
-              </ul>
-              <br />
-
-              Together, we rise. 💡
+        </div>
+        <div className="mt-4 md:mt-0">
+          <div>
+            <p className=''>
+           The Kachi Aghasili Initiative is a
+            visionary platform dedicated to empowering individuals,
+             strengthening communities, and driving sustainable change...
+            </p>
+          </div>
+          <div className="mt-10 md:grid md:grid-cols-3 md:gap-2 md:text-center">
+            <div className="mb-6">
+              <div className="text-3xl md:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
+                <CountUp end={12} enableScrollSpy>
+                  {({ countUpRef }) => (
+                    <div>
+                      <span ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp><p>+</p>
+              </div>
+              <p>complete project</p>
+            </div>
+            <div className="mb-6">
+              <div className="text-3xl md:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
+                <CountUp end={80} enableScrollSpy>
+                  {({ countUpRef }) => (
+                    <div>
+                      <span ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp><p>%</p>
+              </div>
+              <p>success rate</p>
+            </div>
+            <div className="mb-6">
+              <div className="text-3xl md:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
+                <CountUp end={1465} enableScrollSpy>
+                  {({ countUpRef }) => (
+                    <div>
+                      <span ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp><p>+</p>
+              </div>
+              <p>Total Beneficiaries</p>
             </div>
           </div>
-          <div className='flex justify-center py-10 lg:py-0 flex-1 '>
-            <img className='lg:w-[90%] h-[100%]' src={Director} alt="" />
-          </div>
         </div>
+      </div>
 
+
+
+
+
+      {/* About and image */}
+      <div className='bg-pink-100 pb-30'>
 
         <div className='lg:mt-20 py-16'
 
@@ -178,13 +217,13 @@ function HomePage() {
         <div className='flex-1'>
           <div>
             <h1 className='text-2xl font-bold mb-8'>Welcome to Kachi Aghasili Initiative</h1>
-            <p className='text-[#777777]  md:w-[80%]'>The <b> Kachi Aghasili Initiative</b>
-               is a humanitarian and empowerment platform committed to restoring dignity,
-                inspiring resilience, and creating opportunities for a better future.
-                 Guided by the belief that hope is the foundation for change, 
-                 the Initiative works to uplift individuals and communities
-                  through advocacy, education, and support programs that promote equality,
-                   integrity, and compassion. <br /><br />At its heart,<b> Kachi Aghasili Initiative</b> stands as a beacon of hope — empowering people to rise above challenges, believe in their potential, and build a society where kindness and fairness prevail. </p>
+            <p className='text-[#777777]  md:w-[80%]'>The <b> Kachi Aghasili Initiative </b>
+              is a humanitarian and empowerment platform committed to restoring dignity,
+              inspiring resilience, and creating opportunities for a better future.
+              Guided by the belief that hope is the foundation for change,
+              the Initiative works to uplift individuals and communities
+              through advocacy, education, and support programs that promote equality,
+              integrity, and compassion. <br /><br />At its heart,<b> Kachi Aghasili Initiative</b> stands as a beacon of hope — empowering people to rise above challenges, believe in their potential, and build a society where kindness and fairness prevail. </p>
           </div>
           {/* text-[#12f00a] */}
           <div className='md:flex gap-4 my-10 space-y-4 md:space-y-0'>
@@ -195,12 +234,28 @@ function HomePage() {
             </div>
             <div className='border-1 border-black py-6 px-8'>
               <IoIosPeople className='text-[#777777] text-3xl' />
-              <p className='text-2xl font-bold py-3'>1465</p>
+              <p className='text-2xl font-bold py-3'>
+                <CountUp end={1456} enableScrollSpy>
+                  {({ countUpRef }) => (
+                    <div>
+                      <span ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp>
+              </p>
               <p className='text-[#777777]'>Total Outreach</p>
             </div>
             <div className='border-1 border-black py-6 px-8'>
               <FaPeopleCarry className='text-[#777777] text-3xl' />
-              <p className='text-2xl font-bold py-3'>0</p>
+              <p className='text-2xl font-bold py-3'>
+                <CountUp end={12} enableScrollSpy>
+                  {({ countUpRef }) => (
+                    <div>
+                      <span ref={countUpRef} />
+                    </div>
+                  )}
+                </CountUp>
+              </p>
               <p className='text-[#777777]'>Total Volunteers</p>
             </div>
           </div>
