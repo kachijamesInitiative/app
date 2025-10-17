@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "image": "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/492345462_2311669809228877_7362614426640940583_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=0XpLiY9hA8oQ7kNvwGBUhAG&_nc_oc=AdlMZhvViv5NvZB62_ANIY_znHVyfo6AGA22gbLf6UFRt3rvEpXGjha8ND8zCW0xIwQ&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=3gN4bA_SmEhFhZ1cAgnjHA&oh=00_AfdL58sWKAFUp2CR44TFI10vwf5S-VufQKdgkxXPIZaDxQ&oe=68F86188",
+    "header": "Building Hope Through Innovation",
+    "paragraph": "Our initiative focuses on creating digital solutions that empower communities and drive sustainable impact."
+  },
+  {
+    "id": 2,
+    "image": "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/492345462_2311669809228877_7362614426640940583_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=0XpLiY9hA8oQ7kNvwGBUhAG&_nc_oc=AdlMZhvViv5NvZB62_ANIY_znHVyfo6AGA22gbLf6UFRt3rvEpXGjha8ND8zCW0xIwQ&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=3gN4bA_SmEhFhZ1cAgnjHA&oh=00_AfdL58sWKAFUp2CR44TFI10vwf5S-VufQKdgkxXPIZaDxQ&oe=68F86188",
+    "header": "Empowering Youth With Technology",
+    "paragraph": "We provide training and mentorship programs that enable young innovators to become tech leaders of tomorrow."
+  },
+  {
+    "id": 3,
+    "image": "https://scontent-los2-1.xx.fbcdn.net/v/t39.30808-6/355663204_1854403741622155_9118304990622277707_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=s4gFzXU0Zn8Q7kNvwEntkNk&_nc_oc=Adkxaj31QiGCozw7eRF6auEbRV8LiujYmNPF6O4sZwXQ-SrIZxrZH2BV9d2CKte99NU&_nc_zt=23&_nc_ht=scontent-los2-1.xx&_nc_gid=ehO6-UQCKUm00XFCNtLlzQ&oh=00_AfdvbtIQGYcdC-XgsW6R3wyCziGtrsF7DyEtt7s1lS9umA&oe=68F851CD",
+    "header": "Sustainability and Growth",
+    "paragraph": "We believe in long-term strategies that promote economic growth, environmental protection, and social inclusion."
+  }
+]

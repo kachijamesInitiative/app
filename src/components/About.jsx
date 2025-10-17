@@ -7,13 +7,13 @@ import MobileHomeImage from '../assets/MobileHomeImage.jpeg'
 function About() {
   return (
     <div>
-      <div className='hidden lg:block'
+      <div className='hidden lg:block text-center'
         style={{
 
           backgroundImage: `url(${HomeImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '100vh', // change this to your desired height
+          height: '50vh', // change this to your desired height
           width: '100%', // change this to your desired width
         }}>
         <motion.div
@@ -24,14 +24,27 @@ function About() {
 
         //whileHover={{ scale: 1.1 }} // Animation on hover
         >
-          <div className='text-white text-[100px] font-bold pt-[14%] pl-[7%] w-[80%]'>
-            <p className='leading-28'>KACHI <br />AGHASILI<br />INITIATIVE</p>
+         
+        <div className='pt-[10%] text-[#dadaf0] text-2xl text-center font-extrabold'
+        >
+          <div style={{
+            //position: 'absolute',
+            top: '0%',
+            //left: '50%',
+            //transform: 'translate(-50%, -50%)',
+            background: 'rgba(0, 0, 0, 0.4)',
+            padding: '20px',
+            //borderRadius: '10px',
+            color: 'white',
+            width: '100%'
+          }}
+            className=''>
+            <h1 className='text-[40px]'> About </h1>
+
+            <p className='text-[24px] text-[#12f00a]'>Kachi Aghasili Initiative</p>
+
           </div>
-          <div className='my-12'>
-            <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-20 text-3xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
-              Presenting Hope
-            </Link>
-          </div>
+        </div>
 
         </motion.div>
 

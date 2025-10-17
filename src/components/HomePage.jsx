@@ -11,10 +11,18 @@ import Hope from '../assets/hope.png'
 import { FaCoins } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { FaPeopleCarry } from "react-icons/fa";
-
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import data from '../data/data.json'
 function HomePage() {
+
+  const navigate = useNavigate();
+  const handleView = (id) => {
+    navigate(`/details/${id}`);
+  };
+
+
   return (
     <div>
       <div className='hidden lg:block'
@@ -38,6 +46,7 @@ function HomePage() {
             <p className='leading-28'>KACHI <br />AGHASILI<br />INITIATIVE</p>
           </div>
           <div className='my-12'>
+          
             <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-20 text-3xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
               Presenting Hope
             </Link>
@@ -99,9 +108,9 @@ function HomePage() {
         <div className="mt-4 md:mt-0">
           <div>
             <p className=''>
-           The Kachi Aghasili Initiative is a
-            visionary platform dedicated to empowering individuals,
-             strengthening communities, and driving sustainable change...
+              The Kachi Aghasili Initiative is a
+              visionary platform dedicated to empowering individuals,
+              strengthening communities, and driving sustainable change...
             </p>
           </div>
           <div className="mt-10 md:grid md:grid-cols-3 md:gap-2 md:text-center">
@@ -234,7 +243,7 @@ function HomePage() {
             </div>
             <div className='border-1 border-black py-6 px-8'>
               <IoIosPeople className='text-[#777777] text-3xl' />
-              <p className='text-2xl font-bold py-3'>
+              <div className='text-2xl font-bold py-3'>
                 <CountUp end={1456} enableScrollSpy>
                   {({ countUpRef }) => (
                     <div>
@@ -242,12 +251,12 @@ function HomePage() {
                     </div>
                   )}
                 </CountUp>
-              </p>
+              </div>
               <p className='text-[#777777]'>Total Outreach</p>
             </div>
             <div className='border-1 border-black py-6 px-8'>
               <FaPeopleCarry className='text-[#777777] text-3xl' />
-              <p className='text-2xl font-bold py-3'>
+              <div className='text-2xl font-bold py-3'>
                 <CountUp end={12} enableScrollSpy>
                   {({ countUpRef }) => (
                     <div>
@@ -255,7 +264,7 @@ function HomePage() {
                     </div>
                   )}
                 </CountUp>
-              </p>
+              </div>
               <p className='text-[#777777]'>Total Volunteers</p>
             </div>
           </div>
@@ -265,6 +274,28 @@ function HomePage() {
             <img className='md:w-[70%]  h-[80%]' src={Hope} alt="welcome image" />
           </div>
         </div>
+      </div>
+
+
+      {/* cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+        {data.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white rounded-2xl shadow-lg hover:shadow-xl cursor-pointer transition"
+            onClick={() => handleView(item.id)}
+          >
+            <img
+              src={item.image}
+              alt={item.header}
+              className="w-full h-48 object-cover rounded-t-2xl"
+            />
+            <div className="p-4">
+              <h2 className="text-xl font-semibold mb-2">{item.header}</h2>
+              <p className="text-gray-600 text-sm">{item.paragraph.slice(0, 100)}...</p>
+            </div>
+          </div>
+        ))}
       </div>
 
 
