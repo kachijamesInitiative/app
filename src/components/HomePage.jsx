@@ -42,12 +42,12 @@ function HomePage() {
 
         //whileHover={{ scale: 1.1 }} // Animation on hover
         >
-          <div className='text-white text-[100px] font-bold pt-[14%] pl-[7%] w-[80%]'>
-            <p className='leading-28'>KACHI <br />AGHASILI<br />INITIATIVE</p>
+          <div className='text-white  xl:text-[100px] text-[60px] font-bold pt-[5%] xl:pt-[14%] pl-[7%] w-[80%]'>
+            <p className='xl:leading-28 leading-20'>KACHI <br />AGHASILI<br />INITIATIVE</p>
           </div>
           <div className='my-12'>
-          
-            <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-20 text-3xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
+
+            <Link to={'/whatwedo'} className='ml-[7%] bg-[#12f00a] text-[#171b12] font-bold py-3 px-16 xl:px-20 text-3xl rounded-md hover:bg-[#171b12] hover:text-[#12f00a]'>
               Presenting Hope
             </Link>
           </div>
@@ -91,7 +91,7 @@ function HomePage() {
 
 
       {/* counter */}
-      <div className="mt-8 md:grid md:grid-cols-2 md:gap-2 mb-[100px] lg:p-[100px] bg-white lg:mx-[180px] text-black lg:mt-[-90px] border-b border-green-200  p-4">
+      <div className="mt-8 md:grid md:grid-cols-2 md:gap-2 mb-[100px] lg:p-[50px] xl:p-[100px] bg-white lg:mx-[100px] xl:mx-[180px] text-black lg:mt-[-90px] border-b border-green-200  p-4">
         <div>
           <h1 className="text-1xl md:text-3xl font-extrabold">
             Shaping Narratives of Strength
@@ -115,7 +115,7 @@ function HomePage() {
           </div>
           <div className="mt-10 md:grid md:grid-cols-3 md:gap-2 md:text-center">
             <div className="mb-6">
-              <div className="text-3xl md:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
+              <div className="text-3xl md:text-3xl xl:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
                 <CountUp end={12} enableScrollSpy>
                   {({ countUpRef }) => (
                     <div>
@@ -127,7 +127,7 @@ function HomePage() {
               <p>complete project</p>
             </div>
             <div className="mb-6">
-              <div className="text-3xl md:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
+              <div className="text-3xl md:text-3xl xl:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
                 <CountUp end={80} enableScrollSpy>
                   {({ countUpRef }) => (
                     <div>
@@ -139,7 +139,7 @@ function HomePage() {
               <p>success rate</p>
             </div>
             <div className="mb-6">
-              <div className="text-3xl md:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
+              <div className="text-3xl md:text-3xl xl:text-4xl font-bold text-[#12f00a] flex md:justify-center ">
                 <CountUp end={1465} enableScrollSpy>
                   {({ countUpRef }) => (
                     <div>
@@ -148,7 +148,7 @@ function HomePage() {
                   )}
                 </CountUp><p>+</p>
               </div>
-              <p>Total Beneficiaries</p>
+              <p>Beneficiaries</p>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ function HomePage() {
         </div>
       </div>
 
-      <div className='lg:grid grid-cols-2 py-8 lg:py-48 md:gap-20 md:mx-8  mx-4 xl:px-64'>
+      <div className='lg:grid grid-cols-2 py-8 lg:py-48 md:gap-20 md:mx-8  mx-4 md:px-8 xl:px-8 2xl:px-59'>
         <div className='flex-1'>
           <div>
             <h1 className='text-2xl font-bold mb-8'>Welcome to Kachi Aghasili Initiative</h1>
@@ -270,32 +270,48 @@ function HomePage() {
           </div>
         </div>
         <div className='flex-1 '>
-          <div className='lg:bg-[#f3e9e9] lg:flex justify-center pb-9'>
-            <img className='md:w-[70%]  h-[80%]' src={Hope} alt="welcome image" />
+          <div className='lg:bg-[#f3e9e9] lg:flex justify-center p-4 xl:p-0 pb-9'>
+            <img className='md:w-[100%] xl:w-[70%] h-[100%]' src={Hope} alt="welcome image" />
           </div>
         </div>
       </div>
 
 
       {/* cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-        {data.map((item) => (
-          <div
-            key={item.id}
-            className="bg-white rounded-2xl shadow-lg hover:shadow-xl cursor-pointer transition"
-            onClick={() => handleView(item.id)}
-          >
-            <img
-              src={item.image}
-              alt={item.header}
-              className="w-full h-48 object-cover rounded-t-2xl"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{item.header}</h2>
-              <p className="text-gray-600 text-sm">{item.paragraph.slice(0, 100)}...</p>
+      <div className='grid grid-cols-1 lg:grid-cols-2 md:gap-20 md:mx-8  mx-4 md:px-8 xl:px-8 2xl:px-52'>
+        <div className='text-center md:text-left pb-8'>
+          <h1 className='md:text-3xl lg:text-4xl xl:text-8xl font-bold mb-8 text-4xl'>Our Journeys <br /> That Matter</h1>
+          <p className='text-[18px]'>Every movement begins with courage and hope. Discover stories showing how unity create last impact.</p>
+
+        </div>
+
+
+        <div className="">
+          {data.map((item) => (
+            <div
+              key={item.id}
+              className=" rounded-2xl  cursor-pointer transition"
+              onClick={() => handleView(item.id)}
+            >
+              <div className='md:grid grid-cols-2  md:space-y-8'>
+                <div >
+                  <img
+                    src={item.image}
+                    alt={item.header}
+                    className="w-full h-48 object-cover rounded-t-2xl"
+                  />
+                </div>
+                <div className="p-4 pb-20 md:pb-0">
+                  <h2 className="text-xl font-semibold mb-2">{item.header}</h2>
+                  <p className="text-gray-600 text-sm">{item.paragraph.slice(0, 50)}...</p>
+                  <div className="mt-4 py-2 border-b w-20">
+                    Read More
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
 
