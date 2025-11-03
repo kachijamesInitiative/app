@@ -87,7 +87,7 @@ function About() {
       <div className='lg:flex gap-8  justify-cente p-2 lg:p-10'>
         <div className='flex-1 shadow-2xl p-2 lg:p-10'>
           <h1 className='text-2xl md:text-4xl font-bold pb-2 lg:pb-11 text-[#2d80aa]'>About</h1>
-          <div className='text-[#2d80aa]'>
+          <div className=''>
             <h1>🌍 <b>Kachi James Initiative</b></h1>
             The Kachi Aghasili Initiative is a visionary platform dedicated to empowering individuals, strengthening communities, and driving sustainable change. Built on the belief that every person deserves the opportunity to thrive, the initiative focuses on <b>youth empowerment, women’s inclusion, education, and community development.</b>
 

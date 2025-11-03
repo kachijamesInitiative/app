@@ -270,8 +270,8 @@ function HomePage() {
           </div>
         </div>
         <div className='flex-1 '>
-          <div className='lg:bg-[#f3e9e9] lg:flex justify-center p-4 xl:p-0 pb-9'>
-            <img className='md:w-[100%] xl:w-[70%] h-[100%]' src={Hope} alt="welcome image" />
+          <div className='lg:bg-[#f3e9e9] lg:flex justify-center p-4 xl:p-4 pb-9'>
+            <img className='md:w-[100%] w-[100%] xl:w-[90%] h-[100%]' src={Hope} alt="welcome image" />
           </div>
         </div>
       </div>
