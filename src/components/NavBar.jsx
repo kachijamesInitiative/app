@@ -114,7 +114,7 @@ function NavBar() {
                         ABOUT US
                     </Link>
                 </div>
-                {/* <div className='p-2'>
+                <div className='p-2'>
                     <Link
                         to="/impact"
                         className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
@@ -123,7 +123,7 @@ function NavBar() {
                         IMPACT
                     </Link>
                 </div>
-                <div className='p-2'>
+                {/* <div className='p-2'>
                     <Link
                         to="/impact"
                         className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
@@ -132,7 +132,7 @@ function NavBar() {
                         PHYLANTROPY
                     </Link>
                 </div> */}
-                <div className='p-2'>
+                {/* <div className='p-2'>
                     <Link
                         to="/whatwedo"
                         className={`${activeTab === 'whatwedo' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
@@ -140,7 +140,7 @@ function NavBar() {
                     >
                         WHAT WE DO
                     </Link>
-                </div>
+                </div> */}
                 <div className='p-2'>
                     <Link
                         to="/speeches"
