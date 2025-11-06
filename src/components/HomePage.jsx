@@ -226,7 +226,7 @@ function HomePage() {
         <div className='flex-1'>
           <div>
             <h1 className='text-2xl font-bold mb-8'>Welcome to Kachi Aghasili Initiative</h1>
-            <p className='text-[#777777]  md:w-[80%]'>The <b> Kachi Aghasili Initiative </b>
+            <p className='  md:w-[80%]'>The <b> Kachi Aghasili Initiative </b>
               is a humanitarian and empowerment platform committed to restoring dignity,
               inspiring resilience, and creating opportunities for a better future.
               Guided by the belief that hope is the foundation for change,
