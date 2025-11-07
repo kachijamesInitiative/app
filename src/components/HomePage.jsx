@@ -356,7 +356,7 @@ function HomePage() {
               <Mail className="text-[#12f00a] w-6 h-6" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="opacity-70">contact@kachiaghasili.org</p>
+                <p className="opacity-70">contact@kachiaghasili.com</p>
               </div>
             </div>
 
@@ -364,7 +364,7 @@ function HomePage() {
               <Phone className="text-[#12f00a] w-6 h-6" />
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="opacity-70">+234 812 345 6789</p>
+                <p className="opacity-70">+234 803 687 3106</p>
               </div>
             </div>
 
