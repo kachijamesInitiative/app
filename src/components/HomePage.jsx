@@ -14,6 +14,7 @@ import { FaPeopleCarry } from "react-icons/fa";
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 import data from '../data/data.json'
 function HomePage() {
 
@@ -314,7 +315,114 @@ function HomePage() {
         </div>
       </div>
 
+{/* CONTACT US */}
+ <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-100 text-gray-800">
+      {/* HERO */}
+      <section className="relative py-28 text-center overflow-hidden">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-extrabold text-[#12f00a] drop-shadow-sm"
+        >
+          Get in Touch
+        </motion.h1>
+        <p className="mt-4 text-lg max-w-xl mx-auto opacity-70">
+          Whether you have questions, want to partner with us, or simply want to say hello —
+          we’re here to connect.
+        </p>
 
+        {/* Decorative Blur */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-orange-300 blur-[120px] opacity-30" />
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-400 blur-[120px] opacity-30" />
+      </section>
+
+      {/* CONTACT GRID */}
+      <section className="max-w-6xl mx-auto px-6 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-14">
+        {/* CONTACT INFO CARD */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-white shadow-xl rounded-3xl p-10 border border-orange-100"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-[#12f00a]">Contact Information</h2>
+          <p className="opacity-70 mb-8">
+            Reach out through any of the methods below. Our team responds within 24 hours.
+          </p>
+
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <Mail className="text-[#12f00a] w-6 h-6" />
+              <div>
+                <h3 className="font-semibold">Email</h3>
+                <p className="opacity-70">contact@kachiaghasili.org</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <Phone className="text-[#12f00a] w-6 h-6" />
+              <div>
+                <h3 className="font-semibold">Phone</h3>
+                <p className="opacity-70">+234 812 345 6789</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <MapPin className="text-[#12f00a] w-6 h-6" />
+              <div>
+                <h3 className="font-semibold">Office Address</h3>
+                <p className="opacity-70">Anambra State, Nigeria</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* FORM CARD */}
+        <motion.form
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-white shadow-xl rounded-3xl p-10 border border-orange-100"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-[#12f00a]">Send Us a Message</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input
+              type="text"
+              placeholder="First Name"
+              className="p-4 rounded-2xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="p-4 rounded-2xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none"
+            />
+          </div>
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="w-full mt-6 p-4 rounded-2xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none"
+          />
+
+          <textarea
+            placeholder="Message"
+            rows="5"
+            className="w-full mt-6 p-4 rounded-2xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none"
+          ></textarea>
+
+          <button
+            type="submit"
+            className="mt-8 flex items-center gap-2 bg-[#12f00a] text-white px-6 py-3 rounded-2xl shadow-lg hover:bg-orange-800 transition"
+          >
+            <Send className="w-5 h-5" /> Send Message
+          </button>
+        </motion.form>
+      </section>
+
+  
+    </div>
 
 
     </div>

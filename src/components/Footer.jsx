@@ -90,7 +90,7 @@ function Footer() {
             </div>
 
             <div className='border-gray-700 border-t lg:mx-52'></div>
-            <p className='lg:mx-52 pt-8 text-[13px] text-center lg:text-start'>&copy; 2025 KACHI J. AGHASILI</p>
+            <p className='lg:mx-52 pt-8 text-[13px] text-center lg:text-start'>  © {new Date().getFullYear()} Kachi Aghasili Initiative — Connecting With Purpose.</p>
             <div className='flex justify-center lg:justify-start lg:mx-52 text-[13px] gap-3 lg:gap-4 text-[#989da1] '>
                 <div className=''>
                     <Link
