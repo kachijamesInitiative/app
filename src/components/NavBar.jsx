@@ -99,7 +99,7 @@ function NavBar() {
                                 <div className='p-2'>
                     <Link
                         to="/"
-                        className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        className={`${activeTab === 'home' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('home')}
                     >
                         HOME
@@ -108,7 +108,7 @@ function NavBar() {
                 <div className='p-2'>
                     <Link
                         to="/about"
-                        className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        className={`${activeTab === 'about' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('about')}
                     >
                         ABOUT US
@@ -117,7 +117,7 @@ function NavBar() {
                 <div className='p-2'>
                     <Link
                         to="/impact"
-                        className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        className={`${activeTab === 'impact' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('impact')}
                     >
                         IMPACT
@@ -132,19 +132,19 @@ function NavBar() {
                         PHYLANTROPY
                     </Link>
                 </div> */}
-                {/* <div className='p-2'>
+                <div className='p-2'>
                     <Link
                         to="/whatwedo"
-                        className={`${activeTab === 'whatwedo' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        className={`${activeTab === 'whatwedo' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('whatwedo')}
                     >
                         WHAT WE DO
                     </Link>
-                </div> */}
+                </div>
                 <div className='p-2'>
                     <Link
                         to="/speeches"
-                        className={`${activeTab === 'speeches' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        className={`${activeTab === 'speeches' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('speeches')}
                     >
                         SPEECHES
@@ -153,13 +153,13 @@ function NavBar() {
                 <div className='p-2'>
                     <Link
                         to="/media"
-                        className={`${activeTab === 'media' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        className={`${activeTab === 'media' ? 'text-yellow-300 font-bold  ' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('media')}
                     >
                         MEDIA
                     </Link>
                 </div>
-                <div className='p-2'>
+                {/* <div className='p-2'>
                     <Link
                         to="/impact"
                         className={`${activeTab === 'impact' ? 'font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
@@ -167,7 +167,7 @@ function NavBar() {
                     >
                         THOUGHTS
                     </Link>
-                </div>
+                </div> */}
             </nav>
 
         </>

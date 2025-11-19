@@ -74,7 +74,7 @@ function WhatWeDo() {
       <div className="max-w-7xl mx-auto px-6 py-20">
         {/* Header */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-amber-600">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-yellow-300">
             What We Do
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
@@ -101,14 +101,14 @@ function WhatWeDo() {
 
               {/* Content */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-amber-700">{p.title}</h2>
+                <h2 className="text-2xl font-bold text-yellow-300">{p.title}</h2>
                 <p className="mt-2 text-gray-700">{p.summary}</p>
 
                 {/* bullet points */}
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 text-sm">
                   {p.bullets.map((b, i) => (
                     <li key={i} className="flex gap-2 items-start">
-                      <span className="w-2 h-2 bg-amber-600 rounded-full mt-1"></span>
+                      <span className="w-2 h-2 bg-yellow-300 rounded-full mt-1"></span>
                       {b}
                     </li>
                   ))}
@@ -118,7 +118,7 @@ function WhatWeDo() {
                 <div className="mt-6">
                   <a
                     href={`#${p.id}`}
-                    className="inline-block px-4 py-2 bg-amber-600 text-white rounded-lg text-sm hover:bg-amber-700 shadow"
+                    className="inline-block px-4 py-2 bg-yellow-300 text-white rounded-lg text-sm hover:bg-amber-700 shadow"
                   >
                     Learn More
                   </a>
