@@ -67,7 +67,7 @@ function NavBar() {
                     </Link>
 
                     <Link
-                        to="/impact"
+                        to="/media"
                         className={activeTab === 'media' ? 'border-b-1 border-black ' : 'hover:border-b-1 hover:border-black '}
                         onClick={() => handleTabClick('media')}
                     >

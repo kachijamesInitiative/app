@@ -94,7 +94,7 @@ function HomePage() {
       {/* counter */}
       <div className="mt-8 md:grid md:grid-cols-2 md:gap-2 mb-[100px] lg:p-[50px] xl:p-[100px] bg-white lg:mx-[100px] xl:mx-[180px] text-black lg:mt-[-90px] border-b border-green-200  p-4">
         <div>
-          <h1 className="text-1xl md:text-3xl font-extrabold">
+          <h1 className="text-[19px] md:text-3xl font-extrabold">
             Shaping Narratives of Strength
             <br />
             <span className="text-[#12f00a]">Presenting Hope</span>
