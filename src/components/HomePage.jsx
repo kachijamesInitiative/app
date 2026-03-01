@@ -21,54 +21,44 @@ function HomePage() {
   const navigate = useNavigate();
   const handleView = (id) => navigate(`/details/${id}`);
 
-  const [christmasCountdown, setChristmasCountdown] = useState('');
-  const [newYearCountdown, setNewYearCountdown] = useState('');
+  // const [christmasCountdown, setChristmasCountdown] = useState('');
+  // const [newYearCountdown, setNewYearCountdown] = useState('');
 
-  useEffect(() => {
-    const updateOnce = () => {
-      const now = new Date().getTime();
-      const christmas = new Date('December 25, 2025 00:00:00').getTime();
-      const newYear = new Date('January 1, 2026 00:00:00').getTime();
+  // useEffect(() => {
+  //   const updateOnce = () => {
+  //     const now = new Date().getTime();
+  //     const christmas = new Date('December 25, 2025 00:00:00').getTime();
+  //     const newYear = new Date('January 1, 2026 00:00:00').getTime();
 
-      const updateCountdown = (target, setState) => {
-        const distance = target - now;
-        if (distance <= 0) {
-          setState("🎉 It's Time! 🎉");
-          return;
-        }
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        setState(`${days}d : ${hours}h : ${minutes}m : ${seconds}s`);
-      };
+  //     const updateCountdown = (target, setState) => {
+  //       const distance = target - now;
+  //       if (distance <= 0) {
+  //         setState("🎉 It's Time! 🎉");
+  //         return;
+  //       }
+  //       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //       setState(`${days}d : ${hours}h : ${minutes}m : ${seconds}s`);
+  //     };
 
-      updateCountdown(christmas, setChristmasCountdown);
-      updateCountdown(newYear, setNewYearCountdown);
-    };
+  //     updateCountdown(christmas, setChristmasCountdown);
+  //     updateCountdown(newYear, setNewYearCountdown);
+  //   };
 
-    // run once immediately
-    updateOnce();
-    const timer = setInterval(updateOnce, 1000);
+  //   // run once immediately
+  //   updateOnce();
+  //   const timer = setInterval(updateOnce, 1000);
 
-    // proper cleanup function
-    return () => clearInterval(timer);
-  }, []);
+  //   // proper cleanup function
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <div>
       {/* FIXED LEFT-SIDE CHRISTMAS DECORATION (visible on large screens) */}
-      <div className="flex flex-col gap-4 items-center justify-start fixed left-0 top-1/4 z-50 p-3 bg-red-600 backdrop-blur-md border-r-4 border-green-400 rounded-r-2xl shadow-xl">
-        <div className="text-2xl animate-bounce">
-          🎄
-        </div>
-        <div className="animate-pulse text-white text-[12px]">Christmas: <br /> {christmasCountdown}</div>
 
-        {/* <div className="text-2xl animate-pulse">🎁</div> */}
-        <div className="text-3xl animate-spin">❄️</div>
-        <div className=" animate-bounce text-white text-[12px]">New Year 2026: <br /> {newYearCountdown}</div>
-        <div className="text-2xl animate-bounce">🔔</div>
-      </div>
 
       {/* FESTIVE COUNTDOWN DECORATION */}
       {/* <div className="bg-red-600 text-white text-center py-5 font-bold text-xl shadow-lg border-b-4 border-green-400">
