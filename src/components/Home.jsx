@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function HomePage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
+        <div className="min-h-screen bg-gray-900 md:bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
             {/* HERO SECTION */}
             <section className="flex flex-col items-center justify-center text-center py-24 px-6">
                 <motion.h1
