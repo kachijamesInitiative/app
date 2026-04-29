@@ -13,7 +13,7 @@ function NavBar() {
     };
 
     return (
-        <>
+        <div className='bg-gray-950 p-2 text-white sticky top-0 z-50'>
             <div className='hidden lg:flex justify-between md:mx-44 mt-6  mb-6'>
                 <div className="hidden md:block">
                     <ul className='font-stretch-expanded'>
@@ -27,7 +27,7 @@ function NavBar() {
                     </ul>
 
                 </div>
-                <nav className='md:flex gap-8 text-gray-600 hidden mt-4 '>
+                <nav className='md:flex gap-8  hidden mt-4 '>
                     <Link
                         to="/"
                         className={activeTab === 'home' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
@@ -170,7 +170,7 @@ function NavBar() {
                 </div> */}
             </nav>
 
-        </>
+        </div>
     );
 }
 

@@ -4,8 +4,8 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaYahoo, FaArrowRight } 
 
 function Footer() {
     return (
-        <div className='bg-black text-white pb-16'>
-            <div className="lg:flex justify-between bg-black text-white px-4 lg:gap-8 pt-16 lg:px-52">
+        <div className='bg-gray-900 text-white pb-16'>
+            <div className="lg:flex justify-between  text-white px-4 lg:gap-8 pt-16 lg:px-52">
                 <div>
                     <div className="flex gap-4">
                         <a href="https://www.facebook.com" aria-label="Facebook">
