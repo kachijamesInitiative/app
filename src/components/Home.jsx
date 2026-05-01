@@ -59,16 +59,22 @@ export default function HomePage() {
                 >
                     <h2 className="text-3xl font-semibold mb-4">About the Founder</h2>
                     <p className="text-gray-300 mb-4">
-                        Kachi Agahsili, Esq., is a distinguished leader, technologist, and philanthropist committed to advancing innovation and empowering communities through transformative initiatives. As CEO of AI Movement Tech and Kachi James Gallery, and Director of the Isi-Nri Museum, she operates at the intersection of technology, culture, and leadership—driving forward-thinking solutions while preserving heritage. With a multidisciplinary background spanning law, emerging technologies, and community development, Kachi is recognized for building platforms that inspire growth, foster creativity, and create lasting global impact.
+                        Kachi Aghasili is a lawyer, cultural advocate, and public-minded leader working at the intersection of law, heritage, and economic development. She currently serves as Director of the Isi Nri Museum, where she leads efforts to preserve Ìgbò history while expanding access to cultural education and engagement.
+
+                        A graduate of Harvard Law School, with additional academic experience at Purdue University and Emory University, Kachi brings a multidisciplinary perspective to governance, combining legal expertise with a deep understanding of culture, innovation, and opportunity. Her work in intellectual property law reflects a broader commitment to protecting African creativity and ensuring that local industries can grow sustainably and competitively.
+
+                        Kachi is the founder of Kachi James Art Gallery in Enugu, Nigeria, a platform dedicated to supporting emerging artists and reshaping narratives around contemporary African life. She is also the founder of AImovement, a tech hub focused on expanding access to digital skills, fostering innovation, and equipping young people with tools to participate in a rapidly evolving global economy.
+
+                        Across her work in law, culture, and technology, Kachi has consistently focused on building institutions, creating opportunities, and connecting communities. These experiences shape her belief that sustainable development must be rooted in identity, innovation, and inclusive growth. She is committed to public service that prioritizes people, strengthening institutions, expanding access to opportunity, and advancing policies that reflect the realities and aspirations of her community.
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mt-6">
                         <div>
-                            <h3 className="text-xl font-bold">5+ Years</h3>
+                            <h3 className="text-xl font-bold">8+ Years</h3>
                             <p className="text-gray-400">Experience</p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold">20+</h3>
+                            <h3 className="text-xl font-bold">22+</h3>
                             <p className="text-gray-400">Projects</p>
                         </div>
                     </div>
