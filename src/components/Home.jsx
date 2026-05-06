@@ -41,6 +41,13 @@ export default function HomePage() {
                 </motion.div>
             </section>
 
+            {/* CAMPAIGN STRIP */}
+            <section className="bg-[#12f00a] text-black py-6 text-center font-semibold tracking-wide">
+                <p className="text-lg md:text-xl">
+                    Kachi Agahsili for Leadership 2026 — A New Era of Inclusive Growth, Innovation & Cultural Strength
+                </p>
+            </section>
+
             {/* ABOUT FOUNDER */}
             <section className="py-20 px-6 grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
                 <motion.img
@@ -58,12 +65,16 @@ export default function HomePage() {
                     whileInView={{ opacity: 1, x: 0 }}
                 >
                     <h2 className="text-3xl font-semibold mb-4">About the Founder</h2>
-                    <p className="text-gray-300 mb-4">
-                        Kachi Aghasili is a lawyer, cultural advocate, and public-minded leader working at the intersection of law, heritage, and economic development. She currently serves as Director of the Isi Nri Museum, where she leads efforts to preserve Ìgbò history while expanding access to cultural education and engagement.
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                        Kachi Aghasili is a lawyer, cultural advocate, and public-minded leader working at the intersection of law, heritage, and economic development. <br /><br />
 
-                        A graduate of Harvard Law School, with additional academic experience at Purdue University and Emory University, Kachi brings a multidisciplinary perspective to governance, combining legal expertise with a deep understanding of culture, innovation, and opportunity. Her work in intellectual property law reflects a broader commitment to protecting African creativity and ensuring that local industries can grow sustainably and competitively.
+                        She currently serves as Director of the Isi Nri Museum, where she leads efforts to preserve Ìgbò history while expanding access to cultural education and engagement. <br /><br />
 
-                        Kachi is the founder of Kachi James Art Gallery in Enugu, Nigeria, a platform dedicated to supporting emerging artists and reshaping narratives around contemporary African life. She is also the founder of AImovement, a tech hub focused on expanding access to digital skills, fostering innovation, and equipping young people with tools to participate in a rapidly evolving global economy.
+                        A graduate of Harvard Law School, with additional academic experience at Purdue University and Emory University, Kachi brings a multidisciplinary perspective to governance, combining legal expertise with a deep understanding of culture, innovation, and opportunity. <br /><br />
+
+                        Her work in intellectual property law reflects a broader commitment to protecting African creativity and ensuring that local industries can grow sustainably and competitively. <br /><br />
+
+                        Kachi is the founder of Kachi James Art Gallery in Enugu, Nigeria, a platform dedicated to supporting emerging artists and reshaping narratives around contemporary African life. She is also the founder of AImovement, a tech hub focused on expanding access to digital skills, fostering innovation, and equipping young people with tools to participate in a rapidly evolving global economy. <br /><br />
 
                         Across her work in law, culture, and technology, Kachi has consistently focused on building institutions, creating opportunities, and connecting communities. These experiences shape her belief that sustainable development must be rooted in identity, innovation, and inclusive growth. She is committed to public service that prioritizes people, strengthening institutions, expanding access to opportunity, and advancing policies that reflect the realities and aspirations of her community.
                     </p>
@@ -80,6 +91,75 @@ export default function HomePage() {
                     </div>
                 </motion.div>
             </section>
+
+
+            {/* CAMPAIGN VISION */}
+            <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+                <h2 className="text-4xl font-bold mb-6">A Vision for the Future</h2>
+
+                <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+                    This campaign represents a commitment to responsible leadership, economic opportunity, and a future where every citizen has access to growth, dignity, and innovation.
+                    Kachi Agahsili’s vision is built on strengthening institutions, empowering youth, and preserving cultural identity while driving forward-looking policies.
+                </p>
+
+                <div className="grid md:grid-cols-3 gap-8">
+                    {[
+                        {
+                            title: "Economic Growth",
+                            text: "Creating sustainable opportunities through innovation, entrepreneurship, and strategic investments."
+                        },
+                        {
+                            title: "Youth Empowerment",
+                            text: "Equipping young people with digital skills, education, and pathways to global competitiveness."
+                        },
+                        {
+                            title: "Cultural Preservation",
+                            text: "Protecting heritage while modernizing access to cultural and creative industries."
+                        }
+                    ].map((item, i) => (
+                        <div key={i} className="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+                            <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                            <p className="text-gray-400">{item.text}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+
+            {/* CAMPAIGN MEDIA */}
+<section className="py-24 px-6 bg-gray-950">
+    <div className="max-w-6xl mx-auto text-center mb-12">
+        <h2 className="text-4xl font-bold mb-4">Campaign Media</h2>
+        <p className="text-gray-400">
+            Watch messages, explore campaign highlights, and stay connected with the movement.
+        </p>
+    </div>
+
+    {/* VIDEO SECTION */}
+    <div className="max-w-5xl mx-auto mb-16">
+        <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Campaign Video"
+                allowFullScreen
+            ></iframe>
+        </div>
+    </div>
+
+    {/* POSTERS GRID */}
+    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {[
+            "https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg",
+            "https://i.ibb.co/r2hG3yB1/Whats-App-Image-2026-05-01-at-4-51-33-AM.jpg",
+            "https://i.ibb.co/FkHmVzFD/Director.jpg"
+        ].map((img, i) => (
+            <div key={i} className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition">
+                <img src={img} alt="Campaign Poster" className="w-full h-full object-cover" />
+            </div>
+        ))}
+    </div>
+</section>
 
 
 
