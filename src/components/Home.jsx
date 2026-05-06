@@ -140,7 +140,7 @@ export default function HomePage() {
         <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
             <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                src="https://www.youtube.com/embed/dMZLdQYRj-w"
                 title="Campaign Video"
                 allowFullScreen
             ></iframe>
