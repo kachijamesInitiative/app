@@ -44,7 +44,7 @@ export default function HomePage() {
             {/* CAMPAIGN STRIP */}
             <section className="bg-[#12f00a] text-black py-6 text-center font-semibold tracking-wide">
                 <p className="text-lg md:text-xl">
-                    Kachi Agahsili for Leadership 2026 — A New Era of Inclusive Growth, Innovation & Cultural Strength
+                    Kachi Agahsili for House of Representative, Awka Nort and South Federal Constituency — A New Era of Inclusive Growth, Innovation & Cultural Strength
                 </p>
             </section>
 
