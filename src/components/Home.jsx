@@ -85,11 +85,11 @@ export default function HomePage() {
 
                     <div className="grid grid-cols-2 gap-4 mt-6">
                         <div>
-                            <h3 className="text-xl font-bold">8+ Years</h3>
+                            <h3 className="text-xl font-bold">10+ Years</h3>
                             <p className="text-gray-400">Experience</p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold">22+</h3>
+                            <h3 className="text-xl font-bold">40+</h3>
                             <p className="text-gray-400">Projects</p>
                         </div>
                     </div>
