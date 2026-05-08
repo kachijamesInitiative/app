@@ -43,11 +43,18 @@ function NavBar() {
                         ABOUT
                     </Link>
                     <Link
+                        to="/speeches"
+                        className={activeTab === 'speeches' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
+                        onClick={() => handleTabClick('speeches')}
+                    >
+                        VISION
+                    </Link>
+                    <Link
                         to="/impact"
                         className={activeTab === 'impact' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black '}
                         onClick={() => handleTabClick('impact')}
                     >
-                        IMPACT
+                        TECH
                     </Link>
 
                     <Link
@@ -58,13 +65,7 @@ function NavBar() {
                         WHAT WE DO
                     </Link>
 
-                    <Link
-                        to="/speeches"
-                        className={activeTab === 'speeches' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
-                        onClick={() => handleTabClick('speeches')}
-                    >
-                        SPEECHES
-                    </Link>
+
 
                     <Link
                         to="/media"
@@ -96,7 +97,7 @@ function NavBar() {
                 </button>
             </div>
             <nav className={` ${isOpen ? 'lg:hidden bg-black p-4 text-white' : 'hidden'} `}>
-                                <div className='p-2'>
+                <div className='p-2'>
                     <Link
                         to="/"
                         className={`${activeTab === 'home' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
@@ -114,13 +115,22 @@ function NavBar() {
                         ABOUT US
                     </Link>
                 </div>
+                                <div className='p-2'>
+                    <Link
+                        to="/speeches"
+                        className={`${activeTab === 'speeches' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        onClick={() => handleTabClick('speeches')}
+                    >
+                        VISION
+                    </Link>
+                </div>
                 <div className='p-2'>
                     <Link
                         to="/impact"
                         className={`${activeTab === 'impact' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('impact')}
                     >
-                        IMPACT
+                        TECH
                     </Link>
                 </div>
                 {/* <div className='p-2'>
@@ -141,15 +151,7 @@ function NavBar() {
                         WHAT WE DO
                     </Link>
                 </div>
-                <div className='p-2'>
-                    <Link
-                        to="/speeches"
-                        className={`${activeTab === 'speeches' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
-                        onClick={() => handleTabClick('speeches')}
-                    >
-                        SPEECHES
-                    </Link>
-                </div>
+
                 <div className='p-2'>
                     <Link
                         to="/media"

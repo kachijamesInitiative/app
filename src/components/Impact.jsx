@@ -1,215 +1,303 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Cpu,
+  BrainCircuit,
+  Globe,
+  Rocket,
+  GraduationCap,
+  Network,
+  ArrowRight,
+  PlayCircle,
+  Sparkles
+} from "lucide-react";
 
-function Impact()  {
-  const metrics = [
-    { label: "People Reached", value: "1,480+" },
-    { label: "Programs Run", value: "48" },
-    { label: "Volunteers", value: "12" },
-    { label: "Communities", value: "15" },
-  ];
-
-  const programs = [
-    {
-      title: "Women Leadership",
-      desc: "Mentorship, skills training, and micro-grants to support women entrepreneurs.",
-    },
-    {
-      title: "Youth Empowerment",
-      desc: "Career workshops, digital skills, and leadership camps for young people.",
-    },
-    {
-      title: "Child Education",
-      desc: "After-school clubs, scholarship awards, and learning materials for children.",
-    },
-  ];
-
-  const stories = [
-    {
-      name: "Kenechukwu",
-      role: "Beneficiary",
-      quote:
-        "The mentorship I received changed how I run my business — I now employ two people and feel confident to grow.",
-    },
-    {
-      name: "Murphy",
-      role: "Volunteer",
-      quote:
-        "Helping run the youth bootcamp was one of the most rewarding weeks of my life. The impact is clear.",
-    },
-  ];
-
+export default function TechPage() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
-      {/* HERO */}
-      <header className="relative bg-gradient-to-r from-emerald-600 to-amber-400 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight">
-                Kachi Aghasili Initiative
-              </h1>
-              <p className="mt-4 text-lg lg:text-xl opacity-95">
-                Presenting Hope — empowering women, youth and children to build resilient
-                communities through skills, opportunity and advocacy.
-              </p>
+    <div className="min-h-screen bg-black text-white overflow-hidden">
 
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#programs"
-                  className="inline-block px-6 py-3 bg-white/90 text-emerald-700 font-semibold rounded shadow hover:scale-[-1] transition-transform">
-                  Our Programs
-                </a>
-                <a
-                  href="#donate"
-                  className="inline-block px-6 py-3 border border-white/30 text-white rounded hover:bg-white/10">
-                  Support Our Work
-                </a>
-              </div>
+      {/* HERO SECTION */}
+      <section className="relative py-32 px-6 text-center overflow-hidden">
 
-              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                {metrics.map((m) => (
-                  <div key={m.label} className="py-3">
-                    <div className="text-2xl font-bold">{m.value}</div>
-                    <div className="text-sm opacity-90">{m.label}</div>
-                  </div>
-                ))}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#12f00a]/10 via-transparent to-black"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 max-w-6xl mx-auto"
+        >
+          <p className="uppercase tracking-[0.4em] text-[#12f00a] text-sm mb-6">
+            TECHNOLOGY & INNOVATION
+          </p>
+
+          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+            Building Africa’s
+            <span className="text-[#12f00a]"> Digital Future</span>
+          </h1>
+
+          <p className="text-gray-300 text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto">
+            Technology is no longer optional —
+            it is the foundation of economic growth,
+            global relevance, youth empowerment,
+            and future leadership.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* FEATURE VIDEO */}
+      <section className="py-24 px-6">
+
+        <div className="max-w-6xl mx-auto">
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              Featured Interview
+            </h2>
+
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Watch Kachi Agahsili speak on innovation,
+              AI education, digital transformation,
+              and the future of technology in Africa.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-800"
+          >
+            <div className="max-w-5xl mx-auto mb-16">
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/Xydqv2lXXvU"
+                  title="Campaign Video"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
 
-            {/* Visual placeholder */}
-            <div className="hidden lg:block">
-              <div className="rounded-xl overflow-hidden shadow-xl bg-white/10">
-                {/* Replace with real image */}
-                <div className="h-72 w-full bg-[url('https://i.ibb.co/pBfNJ04y/test1.jpg')] bg-cover bg-center"></div>
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8">
+              <div className="flex items-center gap-3 text-[#12f00a] mb-3">
+                <PlayCircle />
+                <span className="uppercase tracking-widest text-sm">
+                  Vision Interview
+                </span>
               </div>
+
+              <h3 className="text-2xl md:text-4xl font-bold">
+                Technology, AI & The Future Of Opportunity
+              </h3>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* TECHNOLOGY STATEMENT */}
+      <section className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-20 items-center">
+
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-5xl font-black mb-8 leading-tight">
+            Preparing Young People
+            <span className="text-[#12f00a]"> For The AI Era</span>
+          </h2>
+
+          <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+            <p>
+              Africa’s greatest resource is not oil,
+              minerals, or land —
+              it is the creativity and intelligence
+              of its young population.
+            </p>
+
+            <p>
+              The challenge is access.
+              Millions of talented young people remain disconnected
+              from modern digital opportunities.
+            </p>
+
+            <p>
+              Through AImovement and future-focused initiatives,
+              Kachi Agahsili advocates for digital literacy,
+              artificial intelligence education,
+              innovation hubs, and tech-driven entrepreneurship.
+            </p>
+
+            <p>
+              The goal is clear:
+              empower African youth not only to use technology,
+              but to build it.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="relative"
+        >
+          <img
+            src="https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg"
+            alt="Technology Vision"
+            className="rounded-3xl shadow-2xl object-cover w-full h-[650px]"
+          />
+
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        </motion.div>
+      </section>
+
+      {/* FOCUS AREAS */}
+      <section className="py-28 px-6 bg-gray-950">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-black mb-6">
+              Technology Priorities
+            </h2>
+
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Strategic areas designed to unlock innovation,
+              expand access, and position African youth
+              for the global digital economy.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+            {[
+              {
+                icon: <BrainCircuit size={42} />,
+                title: "Artificial Intelligence",
+                text: "Promoting AI education, awareness, and practical applications across industries and communities."
+              },
+              {
+                icon: <GraduationCap size={42} />,
+                title: "Digital Education",
+                text: "Expanding access to coding, tech skills, online learning, and digital infrastructure."
+              },
+              {
+                icon: <Rocket size={42} />,
+                title: "Startup Ecosystems",
+                text: "Supporting young innovators, founders, and entrepreneurs building scalable solutions."
+              },
+              {
+                icon: <Network size={42} />,
+                title: "Tech Communities",
+                text: "Building collaborative innovation networks connecting creators, developers, and institutions."
+              },
+              {
+                icon: <Globe size={42} />,
+                title: "Global Competitiveness",
+                text: "Preparing African talent for opportunities within the global technology economy."
+              },
+              {
+                icon: <Cpu size={42} />,
+                title: "Future Infrastructure",
+                text: "Advocating for modern digital systems capable of supporting long-term innovation."
+              }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-black border border-gray-800 rounded-3xl p-8 hover:border-[#12f00a] hover:-translate-y-2 transition duration-300"
+              >
+                <div className="text-[#12f00a] mb-6">
+                  {item.icon}
+                </div>
+
+                <h3 className="text-2xl font-bold mb-4">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed">
+                  {item.text}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </header>
+      </section>
 
-      <main className="max-w-6xl mx-auto px-6 py-16">
-        {/* Programs */}
-        <section id="programs" className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">Programs & Focus Areas</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl">
-            We focus on practical, measurable interventions that create lasting opportunities.
+      {/* QUOTE */}
+      <section className="py-32 px-6 text-center relative overflow-hidden">
+
+        <div className="absolute inset-0 bg-[#12f00a]/5 blur-3xl"></div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="relative z-10 max-w-5xl mx-auto"
+        >
+          <Sparkles className="mx-auto text-[#12f00a] w-16 h-16 mb-8" />
+
+          <h2 className="text-4xl md:text-6xl font-black leading-tight mb-10">
+            “The future will reward societies
+            that invest early in knowledge,
+            technology, and human potential.”
+          </h2>
+
+          <p className="text-[#12f00a] text-xl font-semibold">
+            — Kachi Agahsili
           </p>
+        </motion.div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {programs.map((p) => (
-              <article key={p.title} className="p-6 bg-white rounded-lg shadow-sm">
-                <h3 className="text-xl font-bold mb-2">{p.title}</h3>
-                <p className="text-gray-600">{p.desc}</p>
-                <a href="#" className="inline-block mt-4 text-emerald-600 font-medium">
-                  Learn more →
-                </a>
-              </article>
-            ))}
-          </div>
-        </section>
+      {/* CTA */}
+      <section className="py-28 px-6">
 
-        {/* Impact Stories */}
-        <section id="stories" className="mb-12">
-          <h2 className="text-3xl font-semibold mb-4">Impact Stories</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl">
-            Real lives changed — short stories from our beneficiaries and volunteers.
-          </p>
+        <div className="max-w-5xl mx-auto text-center">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {stories.map((s) => (
-              <blockquote key={s.name} className="p-6 bg-amber-50 rounded-lg">
-                <p className="text-gray-800">“{s.quote}”</p>
-                <footer className="mt-4 text-sm text-gray-600">— {s.name}, {s.role}</footer>
-              </blockquote>
-            ))}
-          </div>
-        </section>
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl md:text-6xl font-black mb-8"
+          >
+            Innovation Begins With Access
+          </motion.h2>
 
-        {/* Impact Metrics + Timeline */}
-        <section id="impact" className="mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <div>
-              <h2 className="text-3xl font-semibold mb-4">Measured Impact</h2>
-              <p className="text-gray-600 mb-6">We collect data and report on outcomes every quarter.</p>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed"
+          >
+            Join a movement focused on preparing the next generation
+            for leadership in technology, innovation, and global opportunity.
+          </motion.p>
 
-              <ul className="space-y-4">
-                <li className="flex gap-4 items-start">
-                  <div className="w-12 h-12 bg-emerald-100 rounded flex items-center justify-center font-bold">
-                    1
-                  </div>
-                  <div>
-                    <div className="font-semibold">Women’s Microgrants</div>
-                    <div className="text-gray-600 text-sm">Over 200 small businesses supported in the last year.</div>
-                  </div>
-                </li>
-
-                <li className="flex gap-4 items-start">
-                  <div className="w-12 h-12 bg-emerald-100 rounded flex items-center justify-center font-bold">
-                    2
-                  </div>
-                  <div>
-                    <div className="font-semibold">Youth Skills Training</div>
-                    <div className="text-gray-600 text-sm">Digital and vocational training for 1,500 young people.</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">Latest Report</h3>
-              <div className="bg-white rounded shadow p-4">
-                <p className="text-sm text-gray-600 mb-3">Download our latest impact report (PDF).</p>
-                <a
-                  href="#"
-                  className="inline-block px-4 py-2 bg-[#12f00a] text-white rounded font-medium">
-                  Download Report
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA / Get Involved */}
-        <section id="get-involved" className="mb-12 bg-amber-50 p-8 rounded-lg">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <h2 className="text-2xl font-semibold">Get Involved</h2>
-              <p className="text-gray-700">Volunteer, partner, or donate — help us scale our impact.</p>
-            </div>
-
-            <div className="flex gap-4">
-              <a href="#donate" className="px-5 py-3 bg-[#12f00a] text-white rounded font-semibold">
-                Donate
-              </a>
-              <a href="#volunteer" className="px-5 py-3 border border-emerald-600 text-emerald-600 rounded font-semibold">
-                Volunteer
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
-        <section id="donate" className="mb-20">
-          <div className="rounded-lg bg-gradient-to-r from-emerald-600 to-amber-400 text-white p-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h3 className="text-2xl font-bold">Support the Kachi Aghasili Initiative</h3>
-              <p className="mt-3">Your donation helps fund education, mentorship and community programs.</p>
-              <div className="mt-6 flex justify-center gap-4">
-                <a href="#" className="px-6 py-3 bg-white text-emerald-700 rounded font-semibold">
-                  Donate Now
-                </a>
-                <a href="#" className="px-6 py-3 border border-white/60 rounded">
-                  Learn How to Partner
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
+          <motion.button
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-12 inline-flex items-center gap-3 bg-[#12f00a] text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition"
+          >
+            Explore AImovement
+            <ArrowRight />
+          </motion.button>
+        </div>
+      </section>
 
     </div>
   );
 }
-
-export default Impact

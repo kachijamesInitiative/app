@@ -127,39 +127,39 @@ export default function HomePage() {
 
 
             {/* CAMPAIGN MEDIA */}
-<section className="py-24 px-6 bg-gray-950">
-    <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4">Campaign Media</h2>
-        <p className="text-gray-400">
-            Watch messages, explore campaign highlights, and stay connected with the movement.
-        </p>
-    </div>
+            <section className="py-24 px-6 bg-gray-950">
+                <div className="max-w-6xl mx-auto text-center mb-12">
+                    <h2 className="text-4xl font-bold mb-4">Campaign Media</h2>
+                    <p className="text-gray-400">
+                        Watch messages, explore campaign highlights, and stay connected with the movement.
+                    </p>
+                </div>
 
-    {/* VIDEO SECTION */}
-    <div className="max-w-5xl mx-auto mb-16">
-        <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-            <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dMZLdQYRj-w"
-                title="Campaign Video"
-                allowFullScreen
-            ></iframe>
-        </div>
-    </div>
+                {/* VIDEO SECTION */}
+                <div className="max-w-5xl mx-auto mb-16">
+                    <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                        <iframe
+                            className="w-full h-full"
+                            src="https://www.youtube.com/embed/dMZLdQYRj-w"
+                            title="Campaign Video"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </div>
 
-    {/* POSTERS GRID */}
-    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {[
-            "https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg",
-            "https://i.ibb.co/r2hG3yB1/Whats-App-Image-2026-05-01-at-4-51-33-AM.jpg",
-            "https://i.ibb.co/FkHmVzFD/Director.jpg"
-        ].map((img, i) => (
-            <div key={i} className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition">
-                <img src={img} alt="Campaign Poster" className="w-full h-full object-cover" />
-            </div>
-        ))}
-    </div>
-</section>
+                {/* POSTERS GRID */}
+                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    {[
+                        "https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg",
+                        "https://i.ibb.co/r2hG3yB1/Whats-App-Image-2026-05-01-at-4-51-33-AM.jpg",
+                        "https://i.ibb.co/FkHmVzFD/Director.jpg"
+                    ].map((img, i) => (
+                        <div key={i} className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition">
+                            <img src={img} alt="Campaign Poster" className="w-full h-full object-cover" />
+                        </div>
+                    ))}
+                </div>
+            </section>
 
 
 
