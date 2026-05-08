@@ -46,60 +46,38 @@ export default function TechPage() {
       </section>
 
       {/* FEATURE VIDEO */}
-      <section className="py-24 px-6">
+<motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+  className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-800"
+>
+  <div className="max-w-5xl mx-auto">
+    <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/Xydqv2lXXvU?rel=0&modestbranding=1"
+        title="Campaign Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
 
-        <div className="max-w-6xl mx-auto">
+  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8 pointer-events-none">
+    <div className="flex items-center gap-3 text-[#12f00a] mb-3">
+      <PlayCircle />
+      <span className="uppercase tracking-widest text-sm">
+        Vision Interview
+      </span>
+    </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
-              Featured Interview
-            </h2>
-
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Watch Kachi Agahsili speak on innovation,
-              AI education, digital transformation,
-              and the future of technology in Africa.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-800"
-          >
-            <div className="max-w-5xl mx-auto mb-16">
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/Xydqv2lXXvU"
-                  title="Campaign Video"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-8">
-              <div className="flex items-center gap-3 text-[#12f00a] mb-3">
-                <PlayCircle />
-                <span className="uppercase tracking-widest text-sm">
-                  Vision Interview
-                </span>
-              </div>
-
-              <h3 className="text-2xl md:text-4xl font-bold">
-                Technology, AI & The Future Of Opportunity
-              </h3>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <h3 className="text-2xl md:text-4xl font-bold">
+      Technology, AI & The Future Of Opportunity
+    </h3>
+  </div>
+</motion.div>
 
       {/* TECHNOLOGY STATEMENT */}
       <section className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-20 items-center">

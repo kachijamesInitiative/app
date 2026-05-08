@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import data from '../data/data.json'
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
     return (
@@ -35,9 +36,12 @@ export default function HomePage() {
                     <button className="rounded-2xl px-6 py-3 bg-white text-black font-semibold hover:opacity-90">
                         Get Involved
                     </button>
+
+                    <Link to="/about">
                     <button className="rounded-2xl px-6 py-3 border border-white hover:bg-white hover:text-black transition">
                         Learn More
                     </button>
+                    </Link>
                 </motion.div>
             </section>
 
@@ -219,7 +223,7 @@ export default function HomePage() {
 
 
 
-            <section className="max-w-6xl mx-auto px-6 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-14 mt-16">
+            <section className="max-w-6xl mx-auto px-6 pb-28 grid grid-cols-1 lg:grid-cols-2 gap-14 mt-16" >
                 {/* CONTACT INFO CARD */}
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}
