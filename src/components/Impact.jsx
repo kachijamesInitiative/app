@@ -108,7 +108,7 @@ export default function TechPage() {
 
             <p>
               Through AImovement and future-focused initiatives,
-              Kachi Agahsili advocates for digital literacy,
+              Kachi Aghasili advocates for digital literacy,
               artificial intelligence education,
               innovation hubs, and tech-driven entrepreneurship.
             </p>
@@ -233,7 +233,7 @@ export default function TechPage() {
           </h2>
 
           <p className="text-[#12f00a] text-xl font-semibold">
-            — Kachi Agahsili
+            — Kachi Aghasili
           </p>
         </motion.div>
       </section>

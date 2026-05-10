@@ -35,7 +35,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            The Kachi Agahsili Initiative represents a new generation of leadership —
+            The Kachi Aghasili Initiative represents a new generation of leadership —
             one that blends policy, technology, culture, and community-driven action
             to create lasting opportunities for the people of today and generations ahead.
           </p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
         >
           <img
             src="https://i.ibb.co/My1YV7Zf/director.jpg"
-            alt="Kachi Agahsili"
+            alt="Kachi Aghasili"
             className="rounded-3xl shadow-2xl object-cover w-full h-[650px]"
           />
 
@@ -78,7 +78,7 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
             <p>
-              Kachi Agahsili is a lawyer, cultural advocate,
+              Kachi Aghasili is a lawyer, cultural advocate,
               innovator, and institution builder committed to creating
               systems that empower people beyond political cycles.
             </p>
@@ -210,7 +210,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-[#12f00a] text-xl font-semibold">
-            — Kachi Agahsili
+            — Kachi Aghasili
           </p>
         </motion.div>
       </section>
@@ -235,7 +235,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-gray-400 text-xl max-w-4xl mx-auto leading-relaxed"
           >
-            The Kachi Agahsili Initiative is not limited to elections or public office.
+            The Kachi Aghasili Initiative is not limited to elections or public office.
             It is a long-term platform focused on building institutions,
             empowering communities, and preparing Africa for a future driven by
             knowledge, innovation, and cultural confidence.

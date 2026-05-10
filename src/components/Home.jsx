@@ -15,7 +15,7 @@ export default function HomePage() {
                     transition={{ duration: 0.8 }}
                     className="text-4xl md:text-6xl font-bold mb-6"
                 >
-                    Kachi Agahsili Initiative
+                    Kachi Aghasili Initiative
                 </motion.h1>
 
                 <motion.p
@@ -48,7 +48,7 @@ export default function HomePage() {
             {/* CAMPAIGN STRIP */}
             <section className="bg-[#12f00a] text-black py-6 text-center font-semibold tracking-wide">
                 <p className="text-lg md:text-xl">
-                    Kachi Agahsili for House of Representative, Awka Nort and South Federal Constituency — A New Era of Inclusive Growth, Innovation & Cultural Strength
+                    Kachi Aghasili for House of Representative, Awka North and South Federal Constituency — A New Era of Inclusive Growth, Innovation & Cultural Strength
                 </p>
             </section>
 
@@ -103,7 +103,7 @@ export default function HomePage() {
 
                 <p className="text-gray-300 max-w-3xl mx-auto mb-12">
                     This campaign represents a commitment to responsible leadership, economic opportunity, and a future where every citizen has access to growth, dignity, and innovation.
-                    Kachi Agahsili’s vision is built on strengthening institutions, empowering youth, and preserving cultural identity while driving forward-looking policies.
+                    Kachi Aghasili’s vision is built on strengthening institutions, empowering youth, and preserving cultural identity while driving forward-looking policies.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8">
@@ -241,7 +241,7 @@ export default function HomePage() {
                             <Mail className="text-[#12f00a] w-6 h-6" />
                             <div>
                                 <h3 className="font-semibold">Email</h3>
-                                <p className="opacity-70"> aimovement.ng@gmail.com</p>
+                                <p className="opacity-70">kachiaghasilicampaign@gmail.com</p>
                             </div>
                         </div>
 
@@ -249,7 +249,7 @@ export default function HomePage() {
                             <Phone className="text-[#12f00a] w-6 h-6" />
                             <div>
                                 <h3 className="font-semibold">Phone</h3>
-                                <p className="opacity-70">+234 805 493 3457</p>
+                                <p className="opacity-70">+234 812 985 5352</p>
                             </div>
                         </div>
 

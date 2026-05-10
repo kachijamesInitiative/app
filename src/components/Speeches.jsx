@@ -70,7 +70,7 @@ export default function VisionPage() {
                         </p>
 
                         <p>
-                            The Kachi Agahsili Vision seeks to bridge that gap
+                            The Kachi Aghasili Vision seeks to bridge that gap
                             by building systems that are intelligent,
                             inclusive, and future-focused.
                         </p>
@@ -189,7 +189,7 @@ export default function VisionPage() {
                     </h2>
 
                     <p className="text-[#12f00a] text-xl font-semibold">
-                        — Kachi Agahsili Vision 2026
+                        — Kachi Aghasili Vision 2026
                     </p>
                 </motion.div>
             </section>
