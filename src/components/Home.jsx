@@ -38,9 +38,9 @@ export default function HomePage() {
                     </button>
 
                     <Link to="/about">
-                    <button className="rounded-2xl px-6 py-3 border border-white hover:bg-white hover:text-black transition">
-                        Learn More
-                    </button>
+                        <button className="rounded-2xl px-6 py-3 border border-white hover:bg-white hover:text-black transition">
+                            Learn More
+                        </button>
                     </Link>
                 </motion.div>
             </section>
@@ -70,6 +70,21 @@ export default function HomePage() {
                 >
                     <h2 className="text-3xl font-semibold mb-4">About the Founder</h2>
                     <p className="text-gray-300 mb-4 leading-relaxed">
+                        Kachi Aghasili (Ọdịụkọ Na Mba) is a lawyer, cultural advocate, and public-minded leader working at the intersection of law, heritage, and economic development. She is from Nise in Anambra State and currently serves as Director of the Isi Nri Museum, Enugwu-Ukwu, where she leads efforts to preserve Ìgbò history while expanding access to cultural education and engagement.
+
+                        <br /><br />
+
+                        A graduate of Harvard Law School, with additional academic experience at Purdue University and Emory University, Kachi brings a multidisciplinary perspective to governance, combining legal expertise with a deep understanding of culture, innovation, and opportunity. Her work in intellectual property law reflects a broader commitment to protecting African creativity and ensuring that local industries can grow sustainably and competitively.
+
+                        <br /><br />
+
+                        Kachi is the founder of Kachi James Art Gallery in Enugu, Nigeria, a platform dedicated to supporting emerging artists and reshaping narratives around contemporary African life. She is also the founder of AImovement, a tech hub focused on expanding access to digital skills, fostering innovation, and equipping young people with tools to participate in a rapidly evolving global economy.
+
+                        <br /><br />
+
+                        Across her work in law, culture, and technology, Kachi has consistently focused on building institutions, creating opportunities, and connecting communities. These experiences shape her belief that sustainable development must be rooted in identity, innovation, and inclusive growth. She is committed to public service that prioritizes people, strengthens institutions, expands access to opportunity, and advances policies that reflect the realities and aspirations of her community.
+                    </p>
+                    {/* <p className="text-gray-300 mb-4 leading-relaxed">
                         Kachi Aghasili is a lawyer, cultural advocate, and public-minded leader working at the intersection of law, heritage, and economic development. <br /><br />
 
                         She currently serves as Director of the Isi Nri Museum, where she leads efforts to preserve Ìgbò history while expanding access to cultural education and engagement. <br /><br />
@@ -81,7 +96,7 @@ export default function HomePage() {
                         Kachi is the founder of Kachi James Art Gallery in Enugu, Nigeria, a platform dedicated to supporting emerging artists and reshaping narratives around contemporary African life. She is also the founder of AImovement, a tech hub focused on expanding access to digital skills, fostering innovation, and equipping young people with tools to participate in a rapidly evolving global economy. <br /><br />
 
                         Across her work in law, culture, and technology, Kachi has consistently focused on building institutions, creating opportunities, and connecting communities. These experiences shape her belief that sustainable development must be rooted in identity, innovation, and inclusive growth. She is committed to public service that prioritizes people, strengthening institutions, expanding access to opportunity, and advancing policies that reflect the realities and aspirations of her community.
-                    </p>
+                    </p> */}
 
                     <div className="grid grid-cols-2 gap-4 mt-6">
                         <div>
