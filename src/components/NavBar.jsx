@@ -68,11 +68,11 @@ function NavBar() {
 
 
                     <Link
-                        to="/media"
+                        to="/contact"
                         className={activeTab === 'media' ? 'border-b-1 border-black ' : 'hover:border-b-1 hover:border-black '}
                         onClick={() => handleTabClick('media')}
                     >
-                        MEDIA
+                        CONTACT US
                     </Link>
                     {/* Add similar logic for other tabs */}
                 </nav>
@@ -154,11 +154,11 @@ function NavBar() {
 
                 <div className='p-2'>
                     <Link
-                        to="/media"
+                        to="/contact"
                         className={`${activeTab === 'media' ? 'text-yellow-300 font-bold  ' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('media')}
                     >
-                        MEDIA
+                        CONTACT US
                     </Link>
                 </div>
                 {/* <div className='p-2'>

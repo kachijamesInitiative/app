@@ -9,6 +9,7 @@ import Media from "./components/Media"
 import Speeches from "./components/Speeches"
 import Footer from "./components/Footer"
 import OurJourneyDetailPage from "./components/OurJourneyDetailPage"
+import StartConversationPage from "./components/Contact"
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
           <Route path="/media" element={<Media />} />
           <Route path="/speeches" element={<Speeches />} />
           <Route path="/details/:id" element={<OurJourneyDetailPage />} />
+          <Route path="/contact" element={<StartConversationPage />} />
+        
       </Routes>
       <Footer />
     </>
