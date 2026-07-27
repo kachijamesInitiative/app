@@ -69,7 +69,7 @@ export default function LuxuryHomepagePreview() {
               The Kachi Aghasili Initiative is focused on creating lasting
               social impact through leadership, technology, youth empowerment,
               and cultural preservation — shaping a future rooted in identity,
-              innovation, and inclusive growth.
+              innovation, and inclusive growths.
             </motion.p>
 
             <motion.div

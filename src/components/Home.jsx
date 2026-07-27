@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
+
 import {
     ArrowRight,
     Play,
@@ -9,6 +10,18 @@ import {
     Phone,
     MapPin,
     Globe,
+    CheckCircle2,
+    GraduationCap,
+    HeartPulse,
+    BriefcaseBusiness,
+    Cpu,
+    Sprout,
+    Landmark,
+    Users,
+    Handshake,
+    Mic2,
+    Award,
+
 } from "lucide-react";
 
 export default function LuxuryHomepagePreview() {
@@ -26,7 +39,84 @@ export default function LuxuryHomepagePreview() {
             text: "Preserving heritage while modernizing access to cultural identity, storytelling, and creative industries.",
         },
     ];
+    const manifesto = [
+        {
+            number: "01",
+            icon: GraduationCap,
+            title: "Education",
+            description:
+                "Modern classrooms, scholarships, teacher development and digital learning opportunities for every child."
+        },
+        {
+            number: "02",
+            icon: HeartPulse,
+            title: "Healthcare",
+            description:
+                "Affordable healthcare, stronger primary health centres and maternal care for every family."
+        },
+        {
+            number: "03",
+            icon: BriefcaseBusiness,
+            title: "Economic Growth",
+            description:
+                "Support local businesses, attract investments and empower entrepreneurs to create jobs."
+        },
+        {
+            number: "04",
+            icon: Cpu,
+            title: "Innovation",
+            description:
+                "Digital skills, AI education, technology hubs and innovation-driven opportunities."
+        },
+        {
+            number: "05",
+            icon: Sprout,
+            title: "Agriculture",
+            description:
+                "Support farmers with training, modern equipment, financing and improved market access."
+        },
+        {
+            number: "06",
+            icon: Landmark,
+            title: "Culture & Heritage",
+            description:
+                "Preserve our cultural identity while promoting tourism and the creative economy."
+        }
+    ];
+    const campaignGallery = [
+        {
+            id: 1,
+            title: "Community Outreach",
+            category: "Grassroots Engagement",
+            image:
+                "https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg",
+            description:
+                "Meeting residents, listening to concerns and building solutions together.",
+            icon: Users,
+        },
 
+        {
+            id: 2,
+            title: "Women's Empowerment",
+            category: "Inclusive Leadership",
+            image:
+                "https://i.ibb.co/r2hG3yB1/Whats-App-Image-2026-05-01-at-4-51-33-AM.jpg",
+            description:
+                "Supporting women through opportunity, education and community leadership.",
+            icon: Handshake,
+        },
+
+        {
+            id: 3,
+            title: "Public Address",
+            category: "Leadership",
+            image:
+                "https://i.ibb.co/FkHmVzFD/Director.jpg",
+            description:
+                "Sharing ideas that inspire progress and unite communities.",
+            icon: Mic2,
+        },
+    ];
     return (
         <main className="bg-black text-white overflow-hidden">
             {/* HERO SECTION */}
@@ -43,7 +133,7 @@ export default function LuxuryHomepagePreview() {
                             animate={{ opacity: 1, y: 0 }}
                             className="uppercase tracking-[0.4em] text-sm text-[#12f00a] mb-6"
                         >
-                            Leadership • Innovation • Heritage 
+                            Leadership • Innovation • Heritage
                         </motion.p>
 
                         <motion.h1
@@ -189,7 +279,7 @@ export default function LuxuryHomepagePreview() {
                     >
                         <div className="rounded-[3rem] overflow-hidden border border-white/10 bg-white/5 p-5">
                             <img
-                                src="https://i.ibb.co/My1YV7Zf/director.jpg"
+                                src="https://i.ibb.co/GQMCG3kM/IMG-20260724-WA0149.jpg"
                                 alt="Founder"
                                 className="rounded-[2.5rem] w-full h-[700px] object-cover"
                             />
@@ -272,69 +362,312 @@ export default function LuxuryHomepagePreview() {
                 </div>
             </section>
 
+            <section className="py-32 bg-gradient-to-b from-zinc-950 to-black overflow-hidden">
+
+                <div className="max-w-7xl mx-auto px-6">
+
+                    <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+                        {/* LEFT */}
+
+                        <motion.div
+                            initial={{ opacity: 0, x: -80 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: .8 }}
+                            viewport={{ once: true }}
+                            className="relative"
+                        >
+
+                            <div className="absolute -left-10 -top-10 w-64 h-64 rounded-full bg-[#12f00a]/10 blur-[120px]" />
+
+                            <div className="rounded-[3rem] overflow-hidden border border-white/10">
+
+                                <img
+                                    src="https://i.ibb.co/R5TKxDx/JULY.jpg"
+                                    alt="Kachi Aghasili"
+                                    className="w-full h-[700px] object-cover hover:scale-105 duration-700"
+                                />
+
+                            </div>
+
+                        </motion.div>
+
+                        {/* RIGHT */}
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 80 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: .8 }}
+                            viewport={{ once: true }}
+                        >
+
+                            <p className="uppercase tracking-[0.35em] text-[#12f00a] text-sm mb-6">
+                                Why I'm Running
+                            </p>
+
+                            <h2 className="text-5xl md:text-7xl font-light leading-tight mb-10">
+
+                                Leadership
+                                <br />
+                                Begins With
+                                <br />
+                                Listening.
+
+                            </h2>
+
+                            <p className="text-gray-400 text-lg leading-9 mb-8">
+
+                                Public office should never be about personal ambition—it
+                                should be about creating opportunities that improve lives.
+
+                                <br /><br />
+
+                                Throughout my journey in law, culture, innovation and
+                                community development, I have seen the extraordinary
+                                resilience and creativity of our people.
+
+                                <br /><br />
+
+                                I believe our constituency deserves leadership that
+                                listens, empowers young people, supports women,
+                                strengthens local businesses and preserves our rich
+                                cultural heritage while embracing innovation.
+
+                            </p>
+
+                            <div className="grid md:grid-cols-2 gap-5 mb-12">
+
+                                {[
+                                    "Justice & Accountability",
+                                    "Youth Empowerment",
+                                    "Innovation & Technology",
+                                    "Inclusive Development"
+                                ].map((item, index) => (
+
+                                    <div
+                                        key={index}
+                                        className="flex items-center gap-3"
+                                    >
+
+                                        <CheckCircle2
+                                            size={22}
+                                            className="text-[#12f00a]"
+                                        />
+
+                                        <span className="text-gray-200">
+                                            {item}
+                                        </span>
+
+                                    </div>
+
+                                ))}
+
+                            </div>
+
+                            <button className="group px-8 py-5 rounded-full bg-white text-black flex items-center gap-3 hover:gap-5 duration-300">
+
+                                Read My Manifesto
+
+                                <ArrowRight
+                                    size={18}
+                                    className="group-hover:translate-x-1 duration-300"
+                                />
+
+                            </button>
+
+                        </motion.div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section className="py-32 bg-black">
+
+                <div className="max-w-7xl mx-auto px-6">
+
+                    <div className="text-center mb-24">
+
+                        <p className="uppercase tracking-[0.35em] text-[#12f00a] text-sm mb-5">
+                            Our Manifesto
+                        </p>
+
+                        <h2 className="text-5xl md:text-7xl font-light mb-8">
+                            A Vision
+                            <br />
+                            Rooted In Action.
+                        </h2>
+
+                        <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-9">
+                            Every commitment is designed to improve lives, strengthen
+                            communities and create opportunities that benefit every
+                            resident of Awka North & South Federal Constituency.
+                        </p>
+
+                    </div>
+                    <div className="max-w-5xl mx-auto text-center mb-20">
+
+                        <blockquote className="text-2xl md:text-3xl italic text-white font-light leading-relaxed">
+
+                            "Leadership is measured not by promises made,
+                            but by opportunities created and lives transformed."
+
+                        </blockquote>
+
+                        <p className="mt-6 text-[#12f00a] tracking-[0.3em] uppercase text-sm">
+                            Kachi Aghasili
+                        </p>
+
+                    </div>
+
+                    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                        {manifesto.map((item, index) => {
+
+                            const Icon = item.icon;
+
+                            return (
+
+                                <div
+                                    key={index}
+                                    className="group rounded-[2.5rem] border border-white/10 bg-zinc-900 p-10 hover:border-[#12f00a]/50 hover:-translate-y-3 transition duration-500"
+                                >
+
+                                    <p className="text-[#12f00a] text-sm tracking-[0.3em] mb-8">
+                                        {item.number}
+                                    </p>
+
+                                    <div className="w-16 h-16 rounded-2xl bg-[#12f00a]/10 flex items-center justify-center mb-8">
+
+                                        <Icon
+                                            size={34}
+                                            className="text-[#12f00a]"
+                                        />
+
+                                    </div>
+
+                                    <h3 className="text-3xl font-light mb-5">
+
+                                        {item.title}
+
+                                    </h3>
+
+                                    <p className="text-gray-400 leading-8">
+
+                                        {item.description}
+
+                                    </p>
+
+                                    <button
+                                        className="mt-10 flex items-center gap-3 text-white group-hover:text-[#12f00a] transition"
+                                    >
+
+                                        Learn More
+
+                                        <ArrowRight
+                                            size={18}
+                                            className="group-hover:translate-x-2 transition"
+                                        />
+
+                                    </button>
+
+                                </div>
+
+                            );
+
+                        })}
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
             {/* MEDIA PREVIEW */}
-            <div className="grid lg:grid-cols-12 gap-8 items-start">
+            <section className="py-32 bg-gradient-to-b from-black via-zinc-950 to-black">
+                <div className="max-w-7xl mx-auto px-6">
+                    {/* Section Header */}
+                    <div className="text-center mb-24">
+                        <p className="uppercase tracking-[0.35em] text-[#12f00a] text-sm mb-6">
+                            Campaign In Action
+                        </p>
 
-                {/* VIDEO */}
-                <div className="lg:col-span-7 rounded-[3rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl p-4">
-                    <iframe
-                        className="w-full h-[300px] md:h-[500px] rounded-[2.5rem]"
-                        src="https://www.youtube.com/embed/dMZLdQYRj-w"
-                        title="Campaign Video"
-                        allowFullScreen
-                    ></iframe>
-                    
-                </div>
+                        <h2 className="text-5xl md:text-7xl font-light leading-tight">
+                            Every Conversation
+                            <br />
+                            Builds A Better Tomorrow
+                        </h2>
 
-                {/* POSTERS */}
-                <div className="lg:col-span-5 grid gap-8">
-
-                    {/* POSTER 1 */}
-                    <div className="group rounded-[3rem] border border-white/10 bg-zinc-900 overflow-hidden p-6 hover:bg-zinc-800 transition duration-500">
-
-                        <div className="rounded-[2rem] overflow-hidden bg-black flex items-center justify-center">
-                            <img
-                                src="https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg"
-                                alt="Campaign Poster"
-                                className="w-full h-[500px] object-contain group-hover:scale-[1.02] transition duration-700"
-                            />
-                        </div>
-
-                        <div className="pt-6">
-                            <p className="uppercase tracking-[0.3em] text-xs text-[#12f00a] mb-3">
-                                Campaign Message
-                            </p>
-
-                            <h3 className="text-2xl font-light leading-relaxed">
-                                A vision centered on leadership, innovation, and cultural advancement.
-                            </h3>
-                        </div>
+                        <p className="text-gray-400 text-lg max-w-3xl mx-auto mt-8 leading-9">
+                            Explore speeches, community outreach, grassroots engagement and
+                            meaningful conversations shaping a stronger future.
+                        </p>
                     </div>
 
-                    {/* POSTER 2 */}
-                    <div className="group rounded-[3rem] border border-white/10 bg-zinc-900 overflow-hidden p-6 hover:bg-zinc-800 transition duration-500">
+                    {/* Content */}
+                    <div className="grid lg:grid-cols-12 gap-8 items-start">
+                        {/* Video */}
+                        <div className="lg:col-span-8">
+                            <div className="relative overflow-hidden rounded-[3rem] border border-white/10 bg-zinc-900">
+                                <iframe
+                                    className="w-full h-[350px] md:h-[650px]"
+                                    src="https://www.youtube.com/embed/dMZLdQYRj-w"
+                                    title="Campaign Video"
+                                    allowFullScreen
+                                />
 
-                        <div className="rounded-[2rem] overflow-hidden bg-black flex items-center justify-center">
-                            <img
-                                src="https://i.ibb.co/r2hG3yB1/Whats-App-Image-2026-05-01-at-4-51-33-AM.jpg"
-                                alt="Campaign Poster"
-                                className="w-full h-[600px] object-contain group-hover:scale-[1.02] transition duration-700"
-                            />
+                                <div className="absolute bottom-8 left-8 bg-black/70 backdrop-blur-xl rounded-3xl p-6 max-w-md">
+                                    <p className="uppercase tracking-[0.3em] text-xs text-[#12f00a] mb-3">
+                                        Featured Address
+                                    </p>
+
+                                    <h3 className="text-3xl font-light mb-4 text-white">
+                                        Building Together,
+                                        <br />
+                                        Leading Together.
+                                    </h3>
+
+                                    <p className="text-gray-300 leading-7">
+                                        Watch Kachi Aghasili share her vision for inclusive leadership,
+                                        innovation and sustainable development.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="pt-6">
-                            <p className="uppercase tracking-[0.3em] text-xs text-[#12f00a] mb-3">
-                                Public Engagement
-                            </p>
+                        {/* Side Card */}
+                        <div className="lg:col-span-4">
+                            <div className="rounded-[3rem] border border-white/10 bg-zinc-900 p-10 h-full">
+                                <div className="w-20 h-20 rounded-full bg-[#12f00a]/10 flex items-center justify-center mb-8">
+                                    <Award size={40} className="text-[#12f00a]" />
+                                </div>
 
-                            <h3 className="text-2xl font-light leading-relaxed">
-                                Building stronger connections through purposeful community leadership.
-                            </h3>
+                                <h3 className="text-3xl font-light mb-6 text-white">
+                                    Leadership Through Action
+                                </h3>
+
+                                <p className="text-gray-400 leading-8">
+                                    True leadership is built through listening, collaboration and
+                                    delivering meaningful results that positively impact everyday lives.
+                                </p>
+
+                                <button className="mt-10 bg-white text-black px-8 py-4 rounded-full flex items-center gap-3 hover:gap-5 transition-all duration-300">
+                                    Watch Full Speech
+                                    <Play size={18} />
+                                </button>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </section>
+
+
+
 
             <div className='grid grid-cols-1 lg:grid-cols-2 md:gap-20 md:mx-8  mx-4 md:px-8 xl:px-8 2xl:px-52 mt-20'>
                 <div className='text-center md:text-left pb-8'>
@@ -448,127 +781,14 @@ export default function LuxuryHomepagePreview() {
                         className="w-full mt-6 p-4 rounded-2xl border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200 outline-none"
                     ></textarea>
 
-                        <button className="mt-8 w-full bg-white text-black py-5 rounded-2xl font-medium hover:scale-[1.02] transition duration-300 flex items-center justify-center gap-3">
-                            Send Message
-                            <ArrowRight size={18} />
-                        </button>
+                    <button className="mt-8 w-full bg-white text-black py-5 rounded-2xl font-medium hover:scale-[1.02] transition duration-300 flex items-center justify-center gap-3">
+                        Send Message
+                        <ArrowRight size={18} />
+                    </button>
                 </motion.form>
             </section>
             {/* CONTACT SECTION */}
-            {/* <section className="py-32 px-6">
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
-                    <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-xl p-10 md:p-14"
-                    >
-                        <p className="uppercase tracking-[0.3em] text-sm text-[#12f00a] mb-6">
-                            Contact Information
-                        </p>
 
-                        <h2 className="text-4xl md:text-5xl font-light leading-tight mb-8">
-                            Let’s start a
-                            <br />
-                            meaningful conversation.
-                        </h2>
-
-                        <p className="text-gray-400 text-lg leading-[1.9] mb-12">
-                            Reach out for collaborations, partnerships, media inquiries,
-                            speaking engagements, or community initiatives.
-                        </p>
-
-                        <div className="space-y-8">
-                            <div className="flex items-start gap-5">
-                                <Mail className="text-[#12f00a] w-6 h-6 mt-1" />
-                                <div>
-                                    <h3 className="text-xl mb-2">Email</h3>
-                                    <p className="text-gray-400">
-                                        kachiaghasilicampaign@gmail.com
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-5">
-                                <Phone className="text-[#12f00a] w-6 h-6 mt-1" />
-                                <div>
-                                    <h3 className="text-xl mb-2">Phone</h3>
-                                    <p className="text-gray-400">+234 812 985 5352</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-5">
-                                <MapPin className="text-[#12f00a] w-6 h-6 mt-1" />
-                                <div>
-                                    <h3 className="text-xl mb-2">Location</h3>
-                                    <p className="text-gray-400 leading-relaxed">
-                                        Olive Gate Hotel Junction, 1 Snapp Drive, Independence
-                                        Layout, Enugu.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-5">
-                                <Globe className="text-[#12f00a] w-6 h-6 mt-1" />
-                                <div>
-                                    <h3 className="text-xl mb-2">Global Reach</h3>
-                                    <p className="text-gray-400">
-                                        Open to collaborations and partnerships worldwide.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.form
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-xl p-10 md:p-14"
-                    >
-                        <p className="uppercase tracking-[0.3em] text-sm text-[#12f00a] mb-6">
-                            Send A Message
-                        </p>
-
-                        <h2 className="text-4xl md:text-5xl font-light leading-tight mb-10">
-                            Connect with
-                            <br />
-                            the initiative.
-                        </h2>
-
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <input
-                                type="text"
-                                placeholder="First Name"
-                                className="bg-black/40 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-[#12f00a] transition"
-                            />
-
-                            <input
-                                type="text"
-                                placeholder="Last Name"
-                                className="bg-black/40 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-[#12f00a] transition"
-                            />
-                        </div>
-
-                        <input
-                            type="email"
-                            placeholder="Email Address"
-                            className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-[#12f00a] transition mb-6"
-                        />
-
-                        <textarea
-                            rows="6"
-                            placeholder="Tell us about your inquiry..."
-                            className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-5 outline-none focus:border-[#12f00a] transition resize-none"
-                        />
-
-                        <button className="mt-8 w-full bg-white text-black py-5 rounded-2xl font-medium hover:scale-[1.02] transition duration-300 flex items-center justify-center gap-3">
-                            Send Message
-                            <ArrowRight size={18} />
-                        </button>
-                    </motion.form>
-                </div>
-            </section> */}
         </main>
     );
 }
