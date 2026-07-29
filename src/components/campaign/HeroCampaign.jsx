@@ -134,7 +134,7 @@ export default function HeroCampaign() {
             <div className="rounded-[3rem] overflow-hidden border border-white/10 bg-zinc-800">
 
               <img
-                src="https://i.ibb.co/FkHmVzFD/Director.jpg"
+                src="https://i.ibb.co/R5TKxDx/JULY.jpg"
                 alt="Kachi Aghasili"
                 className="w-full h-[700px] object-cover"
               />
