@@ -10,6 +10,7 @@ import Speeches from "./components/Speeches"
 import Footer from "./components/Footer"
 import OurJourneyDetailPage from "./components/OurJourneyDetailPage"
 import StartConversationPage from "./components/Contact"
+import Campaign from "./components/Campaign"
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/speeches" element={<Speeches />} />
           <Route path="/details/:id" element={<OurJourneyDetailPage />} />
           <Route path="/contact" element={<StartConversationPage />} />
+          <Route path="/campaign" element={<Campaign />} />
         
       </Routes>
       <Footer />

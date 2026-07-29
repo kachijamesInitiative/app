@@ -36,6 +36,13 @@ function NavBar() {
                         HOME
                     </Link>
                     <Link
+                        to="/campaign"
+                        className={activeTab === 'campaign' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
+                        onClick={() => handleTabClick('campaign')}
+                    >
+                        CAMPAIGN
+                    </Link>
+                    <Link
                         to="/about"
                         className={activeTab === 'about' ? 'border-b-1 border-black' : 'hover:border-b-1 hover:border-black'}
                         onClick={() => handleTabClick('about')}
@@ -108,6 +115,15 @@ function NavBar() {
                 </div>
                 <div className='p-2'>
                     <Link
+                        to="/campaign"
+                        className={`${activeTab === 'campaign' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
+                        onClick={() => handleTabClick('campaign')}
+                    >
+                        CAMPAIGN
+                    </Link>
+                </div>
+                <div className='p-2'>
+                    <Link
                         to="/about"
                         className={`${activeTab === 'about' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
                         onClick={() => handleTabClick('about')}
@@ -115,7 +131,7 @@ function NavBar() {
                         ABOUT US
                     </Link>
                 </div>
-                                <div className='p-2'>
+                <div className='p-2'>
                     <Link
                         to="/speeches"
                         className={`${activeTab === 'speeches' ? 'text-yellow-300 font-bold' : 'font-normal'} md:hover:border-b md:hover:border-white md:hover:pb-1`}
