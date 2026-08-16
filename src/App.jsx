@@ -11,6 +11,7 @@ import Footer from "./components/Footer"
 import OurJourneyDetailPage from "./components/OurJourneyDetailPage"
 import StartConversationPage from "./components/Contact"
 import Campaign from "./components/Campaign"
+import Newsletter from "./components/Newsletter"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/details/:id" element={<OurJourneyDetailPage />} />
           <Route path="/contact" element={<StartConversationPage />} />
           <Route path="/campaign" element={<Campaign />} />
+          <Route path="/newsletter" element={<Newsletter />} />
         
       </Routes>
       <Footer />
