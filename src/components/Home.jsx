@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
+import Camp1 from "../assets/Image1.jpeg";
+import Camp2 from "../assets/Image2.jpeg";
+import Camp3 from "../assets/Image3.jpeg";
+
 
 import {
     ArrowRight,
@@ -25,6 +29,12 @@ import {
 } from "lucide-react";
 
 export default function LuxuryHomepagePreview() {
+const campaignImages = {
+  Camp1,
+  Camp2,
+  Camp3,
+};
+
     const focusAreas = [
         {
             title: "Digital Innovation",
@@ -83,40 +93,35 @@ export default function LuxuryHomepagePreview() {
                 "Preserve our cultural identity while promoting tourism and the creative economy."
         }
     ];
-    const campaignGallery = [
-        {
-            id: 1,
-            title: "Community Outreach",
-            category: "Grassroots Engagement",
-            image:
-                "https://i.ibb.co/prnK9jKp/Whats-App-Image-2026-05-05-at-5-10-09-AM.jpg",
-            description:
-                "Meeting residents, listening to concerns and building solutions together.",
-            icon: Users,
-        },
-
-        {
-            id: 2,
-            title: "Women's Empowerment",
-            category: "Inclusive Leadership",
-            image:
-                "https://i.ibb.co/r2hG3yB1/Whats-App-Image-2026-05-01-at-4-51-33-AM.jpg",
-            description:
-                "Supporting women through opportunity, education and community leadership.",
-            icon: Handshake,
-        },
-
-        {
-            id: 3,
-            title: "Public Address",
-            category: "Leadership",
-            image:
-                "https://i.ibb.co/FkHmVzFD/Director.jpg",
-            description:
-                "Sharing ideas that inspire progress and unite communities.",
-            icon: Mic2,
-        },
-    ];
+const campaignGallery = [
+  {
+    id: 1,
+    title: "Community Outreach",
+    category: "Grassroots Engagement",
+    image: campaignImages.Camp1,
+    description:
+      "Meeting residents, listening to concerns and building solutions together.",
+    icon: Users,
+  },
+  {
+    id: 2,
+    title: "Women's Empowerment",
+    category: "Inclusive Leadership",
+    image: campaignImages.Camp2,
+    description:
+      "Supporting women through opportunity, education and community leadership.",
+    icon: Handshake,
+  },
+  {
+    id: 3,
+    title: "Public Address",
+    category: "Leadership",
+    image: campaignImages.Camp3,
+    description:
+      "Sharing ideas that inspire progress and unite communities.",
+    icon: Mic2,
+  },
+];
     return (
         <main className="bg-black text-white overflow-hidden">
             {/* HERO SECTION */}
@@ -669,41 +674,121 @@ export default function LuxuryHomepagePreview() {
 
 
 
-            <div className='grid grid-cols-1 lg:grid-cols-2 md:gap-20 md:mx-8  mx-4 md:px-8 xl:px-8 2xl:px-52 mt-20'>
-                <div className='text-center md:text-left pb-8'>
-                    <h1 className='md:text-3xl lg:text-4xl xl:text-8xl font-bold mb-8 text-4xl'>Our Journeys <br /> That Matter</h1>
-                    <p className='text-[18px]'>Every movement begins with courage and hope. Discover stories showing how unity create last impact.</p>
 
-                </div>
+{/* THE CAMPAIGN JOURNEY */}
+<section className="py-28 bg-black text-white overflow-hidden">
+    <div className="max-w-7xl mx-auto px-6">
 
+        {/* SECTION INTRO */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-20 items-end">
 
-                <div className="">
-                    {data.map((item) => (
-                        <div
-                            key={item.id}
-                            className=" rounded-2xl  cursor-pointer transition"
-                            onClick={() => handleView(item.id)}
-                        >
-                            <div className='md:grid grid-cols-2  md:space-y-8'>
-                                <div >
-                                    <img
-                                        src={item.image}
-                                        alt={item.header}
-                                        className="w-full h-48 object-cover rounded-t-2xl"
-                                    />
-                                </div>
-                                <div className="p-4 pb-20 md:pb-0">
-                                    <h2 className="text-xl font-semibold mb-2">{item.header}</h2>
-                                    <p className="text-gray-600 text-sm">{item.paragraph.slice(0, 50)}...</p>
-                                    <div className="mt-4 py-2 border-b w-20">
-                                        Read More
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <div>
+                <p className="uppercase tracking-[0.35em] text-sm text-[#12f00a] mb-6">
+                    The Campaign • Awka North & South
+                </p>
+
+                <h2 className="text-5xl md:text-7xl xl:text-8xl font-light leading-[1.05]">
+                    A Journey
+                    <br />
+                    <span className="text-[#12f00a]">For The People.</span>
+                </h2>
             </div>
+
+            <div className="max-w-xl">
+                <p className="text-gray-300 text-lg md:text-xl leading-9">
+                    My journey into public service is driven by a simple belief:
+                    leadership must begin with the people. I am running to represent
+                    Awka North and South with purpose, listen to our communities,
+                    amplify their voices and champion opportunities for a better future.
+                </p>
+
+                <p className="text-gray-500 mt-6 leading-8">
+                    This campaign is about more than an election. It is about
+                    building a movement grounded in unity, accountability,
+                    innovation and inclusive development.
+                </p>
+
+                <Link
+                    to="/campaign"
+                    className="inline-flex items-center gap-4 mt-8 text-[#12f00a] font-semibold group"
+                >
+                    Discover My Campaign
+                    <ArrowRight
+                        size={20}
+                        className="group-hover:translate-x-2 transition-transform"
+                    />
+                </Link>
+            </div>
+        </div>
+
+        {/* THREE CAMPAIGN IMAGES */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+            {campaignGallery.map((item, index) => (
+                <motion.article
+                    key={item.id}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: index * 0.15 }}
+                    viewport={{ once: true }}
+                    className="group relative rounded-[2rem] overflow-hidden border border-white/10 bg-zinc-950"
+                >
+                    <div className="relative h-[420px] overflow-hidden">
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+                        <div className="absolute top-6 left-6">
+                            <span className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs tracking-wider text-[#12f00a]">
+                                {item.category}
+                            </span>
+                        </div>
+
+                        <div className="absolute bottom-0 left-0 right-0 p-7">
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="w-10 h-[1px] bg-[#12f00a]" />
+                                <span className="text-xs uppercase tracking-[0.25em] text-gray-300">
+                                    0{index + 1}
+                                </span>
+                            </div>
+
+                            <h3 className="text-3xl font-light mb-3">
+                                {item.title}
+                            </h3>
+
+                            <p className="text-gray-300 leading-7 text-sm">
+                                {item.description}
+                            </p>
+                        </div>
+                    </div>
+                </motion.article>
+            ))}
+
+        </div>
+
+        {/* CAMPAIGN CLOSING STATEMENT */}
+        <div className="mt-20 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
+            <h3 className="text-2xl md:text-4xl font-light max-w-3xl leading-snug">
+                Together, we can build a constituency where every voice matters
+                and every community has a place in our future.
+            </h3>
+
+            <Link
+                to="/campaign/manifesto"
+                className="shrink-0 px-8 py-5 rounded-full bg-[#12f00a] text-black font-semibold flex items-center gap-3 hover:bg-white transition-colors"
+            >
+                Explore Manifesto
+                <ArrowRight size={18} />
+            </Link>
+        </div>
+
+    </div>
+</section>
+
 
 
 
