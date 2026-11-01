@@ -1,253 +1,409 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Play,
-  CalendarDays,
-  Users,
-  MapPin,
+  ArrowUpRight,
   ArrowRight,
+  Landmark,
+  GraduationCap,
+  BriefcaseBusiness,
+  HeartHandshake,
+  Building2,
+  ShieldCheck,
+  Lightbulb,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const timeline = [
+const priorities = [
   {
-    title: "Town Hall Meeting",
-    location: "Awka South",
+    number: "01",
+    title: "Education & Human Capital",
     description:
-      "Engaging directly with citizens on education, healthcare and economic opportunities.",
+      "A future where young people have access to quality education, practical skills and opportunities to compete in a changing world.",
+    icon: GraduationCap,
   },
   {
-    title: "Market Outreach",
-    location: "Eke Awka Market",
+    number: "02",
+    title: "Economic Opportunity",
     description:
-      "Listening to traders and discussing solutions for small businesses.",
+      "Supporting the conditions that help traders, entrepreneurs, farmers and small businesses grow and create sustainable livelihoods.",
+    icon: BriefcaseBusiness,
   },
   {
-    title: "Youth Leadership Forum",
-    location: "Community Hall",
+    number: "03",
+    title: "Community Development",
     description:
-      "Empowering young people through innovation and entrepreneurship.",
+      "Championing better infrastructure, essential services and development that reaches communities across Awka North and South.",
+    icon: Building2,
   },
   {
-    title: "Women's Empowerment Forum",
-    location: "Awka North",
+    number: "04",
+    title: "Inclusive Representation",
     description:
-      "Promoting financial inclusion and support for women-led businesses.",
+      "Making room for the voices of women, young people, professionals, traditional institutions and every part of the constituency.",
+    icon: HeartHandshake,
   },
 ];
 
-const gallery = [
-  "https://i.ibb.co/wZs1q3Sj/campaign-image.jpg",
-  "https://i.ibb.co/HfMPfFBG/IZIZI-Exhibition-1.jpg",
-  "https://i.ibb.co/4Zdc2JC0/IZIZI-Exhibition.jpg",
-  "https://i.ibb.co/q3kTjnKv/Kachi-James-Arts-Gallery-opening-in-Enugu.webp",
+const principles = [
+  {
+    icon: Landmark,
+    title: "Representation with Purpose",
+    text: "A representative should be a strong voice for the people, their needs and their aspirations.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Accountability in Leadership",
+    text: "Public trust deserves transparency, responsibility and a commitment to listening.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Ideas into Opportunities",
+    text: "Progress begins with practical ideas that create opportunities and improve everyday life.",
+  },
 ];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 35 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function CampaignInAction() {
   return (
-    <section className="bg-black text-white py-32">
+    <main className="bg-[#080a08] text-white overflow-hidden">
 
-      <div className="max-w-7xl mx-auto px-6">
+      {/* HERO */}
+      <section className="relative min-h-[680px] flex items-center border-b border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_30%,rgba(18,240,10,0.12),transparent_45%)]" />
+        <div className="absolute right-[-10%] top-[-20%] w-[600px] h-[600px] rounded-full border border-white/[0.04]" />
+        <div className="absolute right-[-4%] top-[-10%] w-[450px] h-[450px] rounded-full border border-white/[0.05]" />
 
-        {/* Heading */}
+        <div className="relative max-w-7xl mx-auto px-6 w-full py-32">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.8 }}
+            className="max-w-5xl"
+          >
+            <div className="flex items-center gap-4 mb-10">
+              <span className="w-12 h-[2px] bg-[#12f00a]" />
+              <p className="uppercase tracking-[0.35em] text-[#12f00a] text-xs md:text-sm">
+                The Vision · The Commitment · The Future
+              </p>
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
-          <p className="uppercase tracking-[0.35em] text-[#12f00a] text-sm mb-5">
-            Campaign In Action
-          </p>
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[110px] font-light leading-[0.98] tracking-[-0.06em]">
+              The work
+              <br />
+              <span className="text-[#12f00a] italic">ahead.</span>
+            </h1>
 
-          <h2 className="text-5xl md:text-7xl font-light leading-tight">
-            Every Conversation
-            <br />
-            Creates Change
-          </h2>
+            <div className="grid md:grid-cols-2 gap-10 mt-12 items-end">
+              <p className="text-gray-400 text-lg md:text-xl leading-9 max-w-xl">
+                Awka North and South deserve representation that listens,
+                understands the people and puts the future of the constituency
+                at the centre of every conversation.
+              </p>
 
-          <p className="max-w-3xl mx-auto text-gray-400 mt-8 text-lg leading-9">
-            Every visit, every meeting and every conversation strengthens our
-            commitment to building stronger communities through service,
-            leadership and opportunity.
-          </p>
-        </motion.div>
-
-        {/* Featured Video */}
-
-        <div className="rounded-[3rem] overflow-hidden border border-white/10 mb-24">
-
-          <div className="aspect-video">
-
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/dMZLdQYRj-w"
-              title="Campaign Video"
-              allowFullScreen
-            />
-
-          </div>
-
+              <div className="md:justify-self-end">
+                <p className="text-white/40 uppercase tracking-[0.25em] text-xs mb-3">
+                  A campaign built around
+                </p>
+                <p className="text-2xl md:text-3xl font-light">
+                  People. Purpose.
+                  <span className="text-[#12f00a]"> Progress.</span>
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
-        {/* Timeline */}
+        <div className="absolute bottom-8 right-8 hidden md:block">
+          <p className="text-white/30 text-[10px] tracking-[0.35em] uppercase [writing-mode:vertical-rl]">
+            Presenting Hope
+          </p>
+        </div>
+      </section>
 
-        <div className="mb-24">
+      {/* MANIFESTO */}
+      <section className="py-28 md:py-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-12 gap-14">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-span-4"
+            >
+              <p className="text-[#12f00a] uppercase tracking-[0.3em] text-xs mb-6">
+                A Different Approach
+              </p>
+              <h2 className="text-4xl md:text-5xl font-light leading-tight">
+                Leadership
+                <br />
+                must mean
+                <br />
+                <span className="text-[#12f00a]">something.</span>
+              </h2>
+            </motion.div>
 
-          <h3 className="text-4xl font-light mb-14">
-            Campaign Timeline
-          </h3>
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="lg:col-span-7 lg:col-start-6"
+            >
+              <p className="text-2xl md:text-3xl font-light leading-relaxed text-white/90">
+                Representation should be more than occupying a seat. It should
+                mean carrying the hopes, concerns and ambitions of the people
+                into the places where decisions are made.
+              </p>
 
-          <div className="space-y-10">
+              <p className="text-gray-500 leading-8 mt-8 max-w-2xl">
+                This campaign is an opportunity to rethink what effective
+                representation can look like: accessible leadership, meaningful
+                engagement and a clear focus on the issues that shape everyday
+                life in our communities.
+              </p>
 
-            {timeline.map((item, index) => (
+              <div className="mt-10 flex items-center gap-4">
+                <span className="w-10 h-[1px] bg-[#12f00a]" />
+                <span className="text-sm tracking-widest uppercase text-gray-400">
+                  Kachi Aghasili · Presenting Hope
+                </span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="flex gap-8"
-              >
+      {/* PRIORITIES */}
+      <section className="py-28 bg-[#101310] border-y border-white/[0.06]">
+        <div className="max-w-7xl mx-auto px-6">
 
-                <div className="flex flex-col items-center">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16"
+          >
+            <div>
+              <p className="text-[#12f00a] uppercase tracking-[0.3em] text-xs mb-5">
+                The Priorities
+              </p>
+              <h2 className="text-5xl md:text-7xl font-light tracking-tight">
+                What matters
+                <br />
+                <span className="text-white/40">most.</span>
+              </h2>
+            </div>
 
-                  <div className="w-5 h-5 rounded-full bg-[#12f00a]" />
+            <p className="text-gray-400 leading-8 max-w-md">
+              A vision for a constituency where people have greater
+              opportunities, stronger communities and a voice that matters.
+            </p>
+          </motion.div>
 
-                  {index !== timeline.length - 1 && (
-                    <div className="w-[2px] flex-1 bg-white/10 mt-2" />
-                  )}
+          <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+            {priorities.map((item, index) => {
+              const Icon = item.icon;
 
-                </div>
-
-                <div className="pb-8">
-
-                  <div className="flex items-center gap-3 text-[#12f00a]">
-
-                    <CalendarDays size={18} />
-
-                    <span>2026</span>
-
+              return (
+                <motion.article
+                  key={item.number}
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.08 }}
+                  className="group bg-[#101310] p-8 md:p-12 hover:bg-[#151a14] transition-colors duration-500"
+                >
+                  <div className="flex justify-between items-start mb-14">
+                    <span className="text-[#12f00a] text-sm tracking-widest">
+                      {item.number}
+                    </span>
+                    <Icon
+                      size={30}
+                      strokeWidth={1.2}
+                      className="text-white/40 group-hover:text-[#12f00a] transition-colors"
+                    />
                   </div>
 
-                  <h4 className="text-2xl mt-3">
+                  <h3 className="text-2xl md:text-3xl font-light mb-5">
                     {item.title}
-                  </h4>
+                  </h3>
 
-                  <div className="flex items-center gap-2 text-gray-400 mt-2">
-
-                    <MapPin size={16} />
-
-                    {item.location}
-
-                  </div>
-
-                  <p className="text-gray-400 leading-8 mt-4">
+                  <p className="text-gray-500 leading-8 max-w-lg">
                     {item.description}
                   </p>
 
+                  <div className="mt-10 w-12 h-[2px] bg-white/20 group-hover:w-24 group-hover:bg-[#12f00a] transition-all duration-500" />
+                </motion.article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* REPRESENTATION */}
+      <section className="py-28 md:py-36">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="absolute -inset-5 border border-[#12f00a]/20 rounded-[2rem] translate-x-3 translate-y-3" />
+
+              <div className="relative min-h-[420px] md:min-h-[540px] rounded-[1.5rem] overflow-hidden bg-gradient-to-br from-[#182118] via-[#101510] to-black p-10 md:p-14 flex flex-col justify-between">
+                <div className="absolute right-[-80px] top-[-80px] w-80 h-80 rounded-full border border-[#12f00a]/10" />
+                <div className="absolute right-[-30px] top-[-30px] w-60 h-60 rounded-full border border-[#12f00a]/10" />
+
+                <div className="relative">
+                  <p className="text-[#12f00a] uppercase tracking-[0.3em] text-xs">
+                    Awka North & South
+                  </p>
                 </div>
 
-              </motion.div>
+                <div className="relative">
+                  <p className="text-5xl md:text-7xl font-light leading-tight tracking-tight">
+                    One
+                    <br />
+                    constituency.
+                    <br />
+                    <span className="text-[#12f00a]">Shared future.</span>
+                  </p>
+                  <div className="w-16 h-[2px] bg-[#12f00a] mt-10" />
+                </div>
 
-            ))}
+                <p className="relative text-white/40 text-xs uppercase tracking-[0.3em]">
+                  Presenting Hope
+                </p>
+              </div>
+            </motion.div>
 
-          </div>
-
-        </div>
-
-        {/* Gallery */}
-
-        <div className="mb-24">
-
-          <h3 className="text-4xl font-light mb-14">
-            Moments From The Campaign
-          </h3>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-            {gallery.map((img, index) => (
-
+            <div>
               <motion.div
-                key={index}
-                whileHover={{ y: -8 }}
-                className="overflow-hidden rounded-[2rem]"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
+                <p className="text-[#12f00a] uppercase tracking-[0.3em] text-xs mb-6">
+                  The Standard We Believe In
+                </p>
 
-                <img
-                  src={img}
-                  alt=""
-                  className="w-full h-80 object-cover hover:scale-110 transition duration-700"
-                />
+                <h2 className="text-4xl md:text-6xl font-light leading-tight mb-8">
+                  Representation
+                  <br />
+                  that works
+                  <br />
+                  <span className="text-white/40">for everyone.</span>
+                </h2>
 
+                <p className="text-gray-500 leading-8 mb-12">
+                  A stronger constituency begins with leadership that values
+                  every community and recognises that development must create
+                  opportunities for people across different backgrounds and
+                  generations.
+                </p>
               </motion.div>
 
-            ))}
+              <div className="space-y-9">
+                {principles.map((item, index) => {
+                  const Icon = item.icon;
 
-          </div>
+                  return (
+                    <motion.div
+                      key={item.title}
+                      variants={fadeUp}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex gap-5 border-b border-white/10 pb-8"
+                    >
+                      <div className="w-12 h-12 shrink-0 rounded-full border border-[#12f00a]/30 flex items-center justify-center">
+                        <Icon size={21} className="text-[#12f00a]" />
+                      </div>
 
-        </div>
-
-        {/* Statistics */}
-
-        <div className="grid md:grid-cols-3 gap-8 mb-24">
-
-          {[
-            ["500+", "Volunteers"],
-            ["30+", "Communities Reached"],
-            ["120+", "Campaign Events"],
-          ].map(([value, label]) => (
-
-            <div
-              key={label}
-              className="rounded-[2rem] border border-white/10 p-10 text-center bg-zinc-900"
-            >
-
-              <Users
-                className="mx-auto text-[#12f00a] mb-6"
-                size={34}
-              />
-
-              <h3 className="text-5xl font-bold">
-                {value}
-              </h3>
-
-              <p className="text-gray-400 mt-3">
-                {label}
-              </p>
-
+                      <div>
+                        <h3 className="text-xl font-medium mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-500 leading-7">
+                          {item.text}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
-
-          ))}
-
+          </div>
         </div>
+      </section>
 
-        {/* CTA */}
+      {/* CLOSING STATEMENT */}
+      <section className="relative py-32 md:py-40 overflow-hidden border-t border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(18,240,10,0.12),transparent_60%)]" />
 
-        <div className="rounded-[3rem] bg-gradient-to-r from-[#12f00a]/10 to-transparent border border-[#12f00a]/20 p-16 text-center">
-
-          <h3 className="text-5xl font-light mb-6">
-            Be Part of the Movement
-          </h3>
-
-          <p className="text-gray-400 max-w-3xl mx-auto leading-9 mb-10">
-            Every volunteer, supporter and community partner helps create
-            lasting change. Together, we can build a brighter future for Awka
-            North and South.
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative max-w-5xl mx-auto px-6 text-center"
+        >
+          <p className="text-[#12f00a] uppercase tracking-[0.35em] text-xs mb-8">
+            The Future Is Worth Working For
           </p>
 
-          <button className="bg-[#12f00a] text-black px-10 py-5 rounded-full flex items-center gap-3 mx-auto hover:scale-105 transition">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight">
+            Hope is not
+            <br />
+            just a promise.
+            <br />
+            <span className="text-[#12f00a] italic">It is a responsibility.</span>
+          </h2>
 
-            Become a Volunteer
+          <p className="text-gray-400 max-w-2xl mx-auto leading-8 mt-9 mb-12">
+            Let us build a future where every community is heard, every voice
+            matters and every opportunity brings us closer to the Awka North
+            and South we believe in.
+          </p>
 
-            <ArrowRight size={20} />
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-4 bg-[#12f00a] text-black px-9 py-5 rounded-full font-semibold hover:bg-white transition-all duration-300 group"
+          >
+            Connect With The Campaign
+            <ArrowUpRight
+              size={20}
+              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+            />
+          </Link>
 
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
+          <div className="mt-20 flex items-center justify-center gap-4">
+            <span className="w-10 h-px bg-white/20" />
+            <span className="text-white/40 uppercase tracking-[0.35em] text-[10px]">
+              Kachi Aghasili · Presenting Hope
+            </span>
+            <span className="w-10 h-px bg-white/20" />
+          </div>
+        </motion.div>
+      </section>
+    </main>
   );
 }
