@@ -152,7 +152,7 @@ export default function LuxuryHomepagePreview() {
       "Building a stronger understanding of the issues, aspirations and opportunities that matter to our communities.",
   },
   {
-    image: Campaign03,
+    image: Campaign04,
     title: "The Power of Coming Together",
     category: "COMMUNITY PARTICIPATION",
     location: "Awka North & South",
@@ -161,7 +161,7 @@ export default function LuxuryHomepagePreview() {
       "A movement shaped by conversations, shared aspirations and the belief that progress is something we build together.",
   },
   {
-    image: Campaign04,
+    image: Campaign03,
     title: "Conversations That Matter",
     category: "PEOPLE & IDEAS",
     location: "Awka North & South",
