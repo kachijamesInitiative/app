@@ -1,15 +1,25 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import Camp1 from "../assets/Image1.jpeg";
 import Camp2 from "../assets/Image2.jpeg";
 import Camp3 from "../assets/Image3.jpeg";
 
+import Campaign01 from "../assets/campaign-01.jpeg";
+import Campaign02 from "../assets/campaign-02.jpeg";
+import Campaign03 from "../assets/campaign-03.jpeg";
+import Campaign04 from "../assets/campaign-04.jpeg";
+import Campaign05 from "../assets/campaign-05.jpeg";
+import Campaign06 from "../assets/campaign-06.jpeg";
+
 
 import {
     ArrowRight,
+    ArrowLeft,
+    ArrowUpRight,
     Play,
+    Camera,
     Mail,
     Phone,
     MapPin,
@@ -25,15 +35,14 @@ import {
     Handshake,
     Mic2,
     Award,
-
 } from "lucide-react";
 
 export default function LuxuryHomepagePreview() {
-const campaignImages = {
-  Camp1,
-  Camp2,
-  Camp3,
-};
+    const campaignImages = {
+        Camp1,
+        Camp2,
+        Camp3,
+    };
 
     const focusAreas = [
         {
@@ -93,35 +102,111 @@ const campaignImages = {
                 "Preserve our cultural identity while promoting tourism and the creative economy."
         }
     ];
-const campaignGallery = [
+    const campaignGallery = [
+        {
+            id: 1,
+            title: "Community Outreach",
+            category: "Grassroots Engagement",
+            image: campaignImages.Camp1,
+            description:
+                "Meeting residents, listening to concerns and building solutions together.",
+            icon: Users,
+        },
+        {
+            id: 2,
+            title: "Women's Empowerment",
+            category: "Inclusive Leadership",
+            image: campaignImages.Camp2,
+            description:
+                "Supporting women through opportunity, education and community leadership.",
+            icon: Handshake,
+        },
+        {
+            id: 3,
+            title: "Public Address",
+            category: "Leadership",
+            image: campaignImages.Camp3,
+            description:
+                "Sharing ideas that inspire progress and unite communities.",
+            icon: Mic2,
+        },
+    ];
+
+    const campaignSlides = [
   {
-    id: 1,
-    title: "Community Outreach",
-    category: "Grassroots Engagement",
-    image: campaignImages.Camp1,
+    image: Campaign01,
+    title: "A Journey of Connection",
+    category: "COMMUNITY ENGAGEMENT",
+    location: "Awka North & South",
+    date: "Campaign Highlights",
     description:
-      "Meeting residents, listening to concerns and building solutions together.",
-    icon: Users,
+      "Every meaningful journey begins with people. Moments of engagement, connection and a shared vision for a better future.",
   },
   {
-    id: 2,
-    title: "Women's Empowerment",
-    category: "Inclusive Leadership",
-    image: campaignImages.Camp2,
+    image: Campaign02,
+    title: "Listening to Our Communities",
+    category: "GRASSROOTS ENGAGEMENT",
+    location: "Awka North & South",
+    date: "Campaign Highlights",
     description:
-      "Supporting women through opportunity, education and community leadership.",
-    icon: Handshake,
+      "Building a stronger understanding of the issues, aspirations and opportunities that matter to our communities.",
   },
   {
-    id: 3,
-    title: "Public Address",
-    category: "Leadership",
-    image: campaignImages.Camp3,
+    image: Campaign03,
+    title: "The Power of Coming Together",
+    category: "COMMUNITY PARTICIPATION",
+    location: "Awka North & South",
+    date: "Campaign Highlights",
     description:
-      "Sharing ideas that inspire progress and unite communities.",
-    icon: Mic2,
+      "A movement shaped by conversations, shared aspirations and the belief that progress is something we build together.",
+  },
+  {
+    image: Campaign04,
+    title: "Conversations That Matter",
+    category: "PEOPLE & IDEAS",
+    location: "Awka North & South",
+    date: "Campaign Highlights",
+    description:
+      "Creating room for ideas, perspectives and conversations that can shape the future of our constituency.",
+  },
+  {
+    image: Campaign05,
+    title: "A Shared Vision for Tomorrow",
+    category: "THE CAMPAIGN JOURNEY",
+    location: "Awka North & South",
+    date: "Campaign Highlights",
+    description:
+      "A future built on opportunity, inclusive leadership and a stronger voice for every community.",
+  },
+  {
+    image: Campaign06,
+    title: "Presenting Hope",
+    category: "THE MOVEMENT",
+    location: "Awka North & South",
+    date: "Campaign Highlights",
+    description:
+      "Every moment adds to a bigger story. A story of hope, participation and the possibilities ahead.",
   },
 ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const activeSlide = campaignSlides[activeIndex];
+
+  const nextSlide = () => {
+    setActiveIndex((prev) => (prev + 1) % campaignSlides.length);
+  };
+
+  const prevSlide = () => {
+    setActiveIndex(
+      (prev) => (prev - 1 + campaignSlides.length) % campaignSlides.length
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 6000);
+    return () => clearInterval(interval);
+  }, []);
     return (
         <main className="bg-black text-white overflow-hidden">
             {/* HERO SECTION */}
@@ -325,6 +410,217 @@ const campaignGallery = [
                 </div>
             </section>
 
+
+            {/* Campaign slide PREVIEW */}
+
+
+<section className="relative bg-[#080a08] text-white py-24 md:py-32 overflow-hidden">
+
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* HEADER */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-10 h-[2px] bg-[#12f00a]" />
+              <p className="text-[#12f00a] text-xs tracking-[0.35em] uppercase">
+                The Campaign Journal
+              </p>
+            </div>
+
+            <h2 className="text-5xl md:text-7xl font-light tracking-tight leading-[1.05]">
+              Moments that
+              <br />
+              <span className="text-white/40">move us forward.</span>
+            </h2>
+          </div>
+
+          <p className="text-gray-500 max-w-md leading-8">
+            A visual record of the conversations, connections and experiences
+            that continue to shape the journey towards a better future for
+            Awka North and South.
+          </p>
+        </div>
+
+        {/* FEATURED SLIDER */}
+        <div className="relative">
+
+          <div className="relative h-[480px] md:h-[650px] lg:h-[700px] rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/10">
+
+            <AnimatePresence mode="wait">
+
+              <motion.div
+                key={activeSlide.image}
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8 }}
+                className="absolute inset-0"
+              >
+
+                <img
+                  src={activeSlide.image}
+                  alt={activeSlide.title}
+                  className="w-full h-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10" />
+
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+
+              </motion.div>
+
+            </AnimatePresence>
+
+            {/* IMAGE COUNTER */}
+            <div className="absolute top-7 left-7 md:top-10 md:left-10 flex items-center gap-3">
+              <Camera size={17} className="text-[#12f00a]" />
+              <span className="text-xs uppercase tracking-[0.25em] text-white/80">
+                Campaign Stories
+              </span>
+            </div>
+
+            {/* SLIDE CONTENT */}
+            <div className="absolute bottom-0 left-0 right-0 p-7 md:p-12 lg:p-16">
+
+              <AnimatePresence mode="wait">
+
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.5 }}
+                  className="max-w-3xl"
+                >
+
+                  <p className="text-[#12f00a] text-xs tracking-[0.3em] uppercase mb-5">
+                    {activeSlide.category}
+                  </p>
+
+                  <h3 className="text-4xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight">
+                    {activeSlide.title}
+                  </h3>
+
+                  <p className="text-gray-300 max-w-2xl leading-8 mt-6 text-sm md:text-base">
+                    {activeSlide.description}
+                  </p>
+
+                  <div className="flex flex-wrap items-center gap-6 mt-8 text-white/60 text-xs uppercase tracking-widest">
+
+                    <span className="flex items-center gap-2">
+                      <MapPin size={15} className="text-[#12f00a]" />
+                      {activeSlide.location}
+                    </span>
+
+                    <span>{activeSlide.date}</span>
+
+                  </div>
+
+                </motion.div>
+
+              </AnimatePresence>
+
+              {/* SLIDER CONTROLS */}
+              <div className="flex items-center justify-between mt-10 pt-7 border-t border-white/20">
+
+                <div className="flex items-center gap-2">
+                  <span className="text-[#12f00a] text-lg font-medium">
+                    {String(activeIndex + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-white/40">/</span>
+                  <span className="text-white/40 text-sm">
+                    {String(campaignSlides.length).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-3">
+
+                  <button
+                    onClick={prevSlide}
+                    aria-label="Previous slide"
+                    className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center hover:bg-[#12f00a] hover:text-black hover:border-[#12f00a] transition-all"
+                  >
+                    <ArrowLeft size={19} />
+                  </button>
+
+                  <button
+                    onClick={nextSlide}
+                    aria-label="Next slide"
+                    className="w-12 h-12 rounded-full bg-[#12f00a] text-black flex items-center justify-center hover:bg-white transition-all"
+                  >
+                    <ArrowRight size={19} />
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* THUMBNAIL NAVIGATION */}
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-3 mt-6">
+
+          {campaignSlides.map((slide, index) => (
+
+            <button
+              key={slide.image}
+              onClick={() => setActiveIndex(index)}
+              className={`relative h-24 md:h-32 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                activeIndex === index
+                  ? "border-[#12f00a] opacity-100"
+                  : "border-transparent opacity-40 hover:opacity-100"
+              }`}
+            >
+
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/20" />
+
+              <span className="absolute bottom-2 left-3 text-white text-xs">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+            </button>
+
+          ))}
+
+        </div>
+
+        {/* FOOTER */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mt-16">
+
+          <div>
+            <p className="text-white text-xl font-light">
+              Every picture tells a story.
+            </p>
+            <p className="text-gray-500 text-sm mt-2">
+              The journey continues.
+            </p>
+          </div>
+
+          <a
+            href="/gallery"
+            className="inline-flex items-center gap-3 text-[#12f00a] uppercase tracking-widest text-xs hover:gap-5 transition-all"
+          >
+            Explore More Moments
+            <ArrowUpRight size={17} />
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
             {/* FOCUS AREAS */}
             <section className="py-32 px-6 border-b border-white/10 bg-zinc-950">
                 <div className="max-w-7xl mx-auto">
@@ -366,6 +662,13 @@ const campaignGallery = [
                     </div>
                 </div>
             </section>
+
+            {/* WHY I'M RUNNING */}
+
+
+
+
+
 
             <section className="py-32 bg-gradient-to-b from-zinc-950 to-black overflow-hidden">
 
@@ -593,201 +896,122 @@ const campaignGallery = [
 
 
 
-            {/* MEDIA PREVIEW */}
-            <section className="py-32 bg-gradient-to-b from-black via-zinc-950 to-black">
+
+
+
+            {/* THE CAMPAIGN JOURNEY */}
+            <section className="py-28 bg-black text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6">
-                    {/* Section Header */}
-                    <div className="text-center mb-24">
-                        <p className="uppercase tracking-[0.35em] text-[#12f00a] text-sm mb-6">
-                            Campaign In Action
-                        </p>
 
-                        <h2 className="text-5xl md:text-7xl font-light leading-tight">
-                            Every Conversation
-                            <br />
-                            Builds A Better Tomorrow
-                        </h2>
+                    {/* SECTION INTRO */}
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-20 items-end">
 
-                        <p className="text-gray-400 text-lg max-w-3xl mx-auto mt-8 leading-9">
-                            Explore speeches, community outreach, grassroots engagement and
-                            meaningful conversations shaping a stronger future.
-                        </p>
-                    </div>
+                        <div>
+                            <p className="uppercase tracking-[0.35em] text-sm text-[#12f00a] mb-6">
+                                The Campaign • Awka North & South
+                            </p>
 
-                    {/* Content */}
-                    <div className="grid lg:grid-cols-12 gap-8 items-start">
-                        {/* Video */}
-                        <div className="lg:col-span-8">
-                            <div className="relative overflow-hidden rounded-[3rem] border border-white/10 bg-zinc-900">
-                                <iframe
-                                    className="w-full h-[350px] md:h-[650px]"
-                                    src="https://www.youtube.com/embed/dMZLdQYRj-w"
-                                    title="Campaign Video"
-                                    allowFullScreen
+                            <h2 className="text-5xl md:text-7xl xl:text-8xl font-light leading-[1.05]">
+                                A Journey
+                                <br />
+                                <span className="text-[#12f00a]">For The People.</span>
+                            </h2>
+                        </div>
+
+                        <div className="max-w-xl">
+                            <p className="text-gray-300 text-lg md:text-xl leading-9">
+                                My journey into public service is driven by a simple belief:
+                                leadership must begin with the people. I am running to represent
+                                Awka North and South with purpose, listen to our communities,
+                                amplify their voices and champion opportunities for a better future.
+                            </p>
+
+                            <p className="text-gray-500 mt-6 leading-8">
+                                This campaign is about more than an election. It is about
+                                building a movement grounded in unity, accountability,
+                                innovation and inclusive development.
+                            </p>
+
+                            <Link
+                                to="/campaign"
+                                className="inline-flex items-center gap-4 mt-8 text-[#12f00a] font-semibold group"
+                            >
+                                Discover My Campaign
+                                <ArrowRight
+                                    size={20}
+                                    className="group-hover:translate-x-2 transition-transform"
                                 />
-
-                                <div className="absolute bottom-8 left-8 bg-black/70 backdrop-blur-xl rounded-3xl p-6 max-w-md">
-                                    <p className="uppercase tracking-[0.3em] text-xs text-[#12f00a] mb-3">
-                                        Featured Address
-                                    </p>
-
-                                    <h3 className="text-3xl font-light mb-4 text-white">
-                                        Building Together,
-                                        <br />
-                                        Leading Together.
-                                    </h3>
-
-                                    <p className="text-gray-300 leading-7">
-                                        Watch Kachi Aghasili share her vision for inclusive leadership,
-                                        innovation and sustainable development.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Side Card */}
-                        <div className="lg:col-span-4">
-                            <div className="rounded-[3rem] border border-white/10 bg-zinc-900 p-10 h-full">
-                                <div className="w-20 h-20 rounded-full bg-[#12f00a]/10 flex items-center justify-center mb-8">
-                                    <Award size={40} className="text-[#12f00a]" />
-                                </div>
-
-                                <h3 className="text-3xl font-light mb-6 text-white">
-                                    Leadership Through Action
-                                </h3>
-
-                                <p className="text-gray-400 leading-8">
-                                    True leadership is built through listening, collaboration and
-                                    delivering meaningful results that positively impact everyday lives.
-                                </p>
-
-                                <button className="mt-10 bg-white text-black px-8 py-4 rounded-full flex items-center gap-3 hover:gap-5 transition-all duration-300">
-                                    Watch Full Speech
-                                    <Play size={18} />
-                                </button>
-                            </div>
+                            </Link>
                         </div>
                     </div>
+
+                    {/* THREE CAMPAIGN IMAGES */}
+                    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+                        {campaignGallery.map((item, index) => (
+                            <motion.article
+                                key={item.id}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.7, delay: index * 0.15 }}
+                                viewport={{ once: true }}
+                                className="group relative rounded-[2rem] overflow-hidden border border-white/10 bg-zinc-950"
+                            >
+                                <div className="relative h-[420px] overflow-hidden">
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+                                    <div className="absolute top-6 left-6">
+                                        <span className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs tracking-wider text-[#12f00a]">
+                                            {item.category}
+                                        </span>
+                                    </div>
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-7">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <span className="w-10 h-[1px] bg-[#12f00a]" />
+                                            <span className="text-xs uppercase tracking-[0.25em] text-gray-300">
+                                                0{index + 1}
+                                            </span>
+                                        </div>
+
+                                        <h3 className="text-3xl font-light mb-3">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="text-gray-300 leading-7 text-sm">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.article>
+                        ))}
+
+                    </div>
+
+                    {/* CAMPAIGN CLOSING STATEMENT */}
+                    <div className="mt-20 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
+                        <h3 className="text-2xl md:text-4xl font-light max-w-3xl leading-snug">
+                            Together, we can build a constituency where every voice matters
+                            and every community has a place in our future.
+                        </h3>
+
+                        <Link
+                            to="/campaign/manifesto"
+                            className="shrink-0 px-8 py-5 rounded-full bg-[#12f00a] text-black font-semibold flex items-center gap-3 hover:bg-white transition-colors"
+                        >
+                            Explore Manifesto
+                            <ArrowRight size={18} />
+                        </Link>
+                    </div>
+
                 </div>
             </section>
-
-
-
-
-
-{/* THE CAMPAIGN JOURNEY */}
-<section className="py-28 bg-black text-white overflow-hidden">
-    <div className="max-w-7xl mx-auto px-6">
-
-        {/* SECTION INTRO */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-20 items-end">
-
-            <div>
-                <p className="uppercase tracking-[0.35em] text-sm text-[#12f00a] mb-6">
-                    The Campaign • Awka North & South
-                </p>
-
-                <h2 className="text-5xl md:text-7xl xl:text-8xl font-light leading-[1.05]">
-                    A Journey
-                    <br />
-                    <span className="text-[#12f00a]">For The People.</span>
-                </h2>
-            </div>
-
-            <div className="max-w-xl">
-                <p className="text-gray-300 text-lg md:text-xl leading-9">
-                    My journey into public service is driven by a simple belief:
-                    leadership must begin with the people. I am running to represent
-                    Awka North and South with purpose, listen to our communities,
-                    amplify their voices and champion opportunities for a better future.
-                </p>
-
-                <p className="text-gray-500 mt-6 leading-8">
-                    This campaign is about more than an election. It is about
-                    building a movement grounded in unity, accountability,
-                    innovation and inclusive development.
-                </p>
-
-                <Link
-                    to="/campaign"
-                    className="inline-flex items-center gap-4 mt-8 text-[#12f00a] font-semibold group"
-                >
-                    Discover My Campaign
-                    <ArrowRight
-                        size={20}
-                        className="group-hover:translate-x-2 transition-transform"
-                    />
-                </Link>
-            </div>
-        </div>
-
-        {/* THREE CAMPAIGN IMAGES */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-            {campaignGallery.map((item, index) => (
-                <motion.article
-                    key={item.id}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: index * 0.15 }}
-                    viewport={{ once: true }}
-                    className="group relative rounded-[2rem] overflow-hidden border border-white/10 bg-zinc-950"
-                >
-                    <div className="relative h-[420px] overflow-hidden">
-                        <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                        <div className="absolute top-6 left-6">
-                            <span className="px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-xs tracking-wider text-[#12f00a]">
-                                {item.category}
-                            </span>
-                        </div>
-
-                        <div className="absolute bottom-0 left-0 right-0 p-7">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="w-10 h-[1px] bg-[#12f00a]" />
-                                <span className="text-xs uppercase tracking-[0.25em] text-gray-300">
-                                    0{index + 1}
-                                </span>
-                            </div>
-
-                            <h3 className="text-3xl font-light mb-3">
-                                {item.title}
-                            </h3>
-
-                            <p className="text-gray-300 leading-7 text-sm">
-                                {item.description}
-                            </p>
-                        </div>
-                    </div>
-                </motion.article>
-            ))}
-
-        </div>
-
-        {/* CAMPAIGN CLOSING STATEMENT */}
-        <div className="mt-20 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
-            <h3 className="text-2xl md:text-4xl font-light max-w-3xl leading-snug">
-                Together, we can build a constituency where every voice matters
-                and every community has a place in our future.
-            </h3>
-
-            <Link
-                to="/campaign/manifesto"
-                className="shrink-0 px-8 py-5 rounded-full bg-[#12f00a] text-black font-semibold flex items-center gap-3 hover:bg-white transition-colors"
-            >
-                Explore Manifesto
-                <ArrowRight size={18} />
-            </Link>
-        </div>
-
-    </div>
-</section>
 
 
 
